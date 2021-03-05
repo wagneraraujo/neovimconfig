@@ -52,7 +52,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-let g:coc_global_extensions = ['coc-css','coc-json','coc-eslint','coc-fzf-preview','coc-stylelint','coc-tsserver']
+let g:coc_global_extensions = ['coc-css','coc-json','coc-fzf-preview','coc-stylelint','coc-tsserver']
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', {
@@ -264,7 +264,7 @@ let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowBookmarks=0
 let g:nerdtree_tabs_focus_on_files=0
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 24
+let g:NERDTreeWinSize = 20
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <C-]> :NERDTreeFind<CR>
 nnoremap <silent> <C-\> :NERDTreeToggle<CR>
@@ -272,12 +272,12 @@ nnoremap <silent> <C-\> :NERDTreeToggle<CR>
 "Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+"autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
 let NERDTreeAutoDeleteBuffer = 1
 "making it prettier
 let NERDTreeDirArrows = 1
-let g:NERDTreeWinPos = "left"
+let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=1
 
 " grep.vim

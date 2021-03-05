@@ -1,0 +1,76 @@
+{
+  "codeLens.enable": true,
+  "diagnostic.errorSign": "✘",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic-languageserver.filetypes": {
+    "sh": "shellcheck"
+  },
+  "eslint.enable": false,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "git.realtimeGutters": true,
+  "suggest.noselect": true,
+  "languageserver": {
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"]
+    },
+    "intelephense": {
+      "command": "intelephense",
+      "args": ["--stdio"],
+      "filetypes": ["php"],
+      "initializationOptions": {
+        "storagePath": "/tmp/intelephense"
+      }
+    }
+  },
+  "signature.target": "echo",
+  "suggest.timeout": 5000,
+  "suggest.asciiCharactersOnly": true,
+  "snippets.ultisnips.enable": false,
+  "snippets.ultisnips.usePythonx": false,
+  "snippets.extends": {
+    "javascriptreact": ["javascript"],
+    "typescript": ["javascript"]
+  },
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "go",
+    "python",
+    "markdown",
+    "javascript",
+    "typescript",
+    "json",
+    "jsonc"
+  ],
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "tags": ["styled", "css", "sass", "sty"]
+      }
+    ]
+  },
+  "coc.source.around.firstMatch": false,
+  "coc.source.file.ignoreHidden": false,
+  "clangd.arguments": ["--background-index"],
+  "typescript.format.semicolons": "insert",
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "typescript.preferences.useAliasesForRenames": false,
+  "list.source.files.command": "fdfind",
+  "list.source.files.args": ["--type", "f"],
+  "rust.clippy_preference": "on",
+  "tsserver.enableJavascript": true,
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "typescript.preferences.quoteStyle": "double",
+  "typescript.referencesCodeLens.enable": false,
+  "git.enableGutters": false
+}
