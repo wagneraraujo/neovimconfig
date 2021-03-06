@@ -925,3 +925,12 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFE
 
 let g:coc_disable_startup_warning = 1
 
+
+"type cursor neovim
+"set guicursor=v-c-sm:block,n-i-ci-ve:ver25,r-cr-o:hor20
+highlight Cursor guifg=white guibg=gray
+highlight iCursor guifg=white guibg=white
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:ver100-iCursor
+set guicursor+=n-v-c:blinkon0
+set guicursor+=i:blinkwait10
