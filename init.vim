@@ -5,7 +5,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
@@ -18,7 +17,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
-Plug 'ajmwagar/vim-deus'
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 else
@@ -29,10 +27,6 @@ let g:make = 'gmake'
 if exists('make')
         let g:make = 'make'
 endif
-"Plug 'Shougo/vimproc.vim', {'do': g:make}
-"Plug 'machakann/vim-highlightedyank'
-"" Snippets
-"Plug 'SirVer/ultisnips'
 Plug 'gorodinskiy/vim-coloresque'
 Plug 'tpope/vim-haml'
 Plug 'mattn/emmet-vim'
@@ -53,18 +47,19 @@ Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 let g:coc_global_extensions = ['coc-css','coc-json','coc-fzf-preview','coc-stylelint','coc-tsserver']
+
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'branch': 'release/1.x',
-  \ 'for': ['javascript', 'typescript', 'css','sass', 'styled-components','less', 'scss', 'json',   'vue', 'yaml', 'html'] }
-Plug 'SirVer/ultisnips'
-Plug 'mlaursen/vim-react-snippets'
+  \ 'for': ['javascript', 'php', 'typescript', 'css','sass', 'styled-components','less', 'scss', 'json',   'vue', 'yaml', 'html'] }
 Plug 'joshdick/onedark.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sainnhe/sonokai'
 Plug 'embark-theme/vim', { 'as': 'embark' }
+Plug 'mhartington/oceanic-next'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Initialize plugin system
 call plug#end()
@@ -73,7 +68,7 @@ set t_Co=256
 set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
 set background=dark
-colorscheme embark "night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
+colorscheme OceanicNext "night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
 "set notermguicolors
 set guifont=JetBrains\ Regular\ Font\ 11
 "set guifont=Hasklig
@@ -107,7 +102,7 @@ set t_Co=256
 set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
 set background=dark
-colorscheme embark "night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
+"colorscheme embark "night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
 "set notermguicolors
 set guifont=JetBrains\ Regular\ Font\ 11
 "set guifont=Hasklig
@@ -235,7 +230,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme ='embark'  " jellybeans  'bubblegum'   'powerlineish'
+let g:airline_theme ='oceanicnext'  " jellybeans  'bubblegum'   'powerlineish'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -608,6 +603,7 @@ let g:mta_filetypes = {
     \ 'ejs' : 1,
     \ 'jsx' : 1,
     \ 'js' : 1,
+    \ 'php' : 1,
     \}
 let g:mta_use_matchparen_group = 1
 let g:mta_set_default_matchtag_color = 1
@@ -934,3 +930,69 @@ set guicursor=n-v-c:block-Cursor
 set guicursor+=i:ver100-iCursor
 set guicursor+=n-v-c:blinkon0
 set guicursor+=i:blinkwait10
+
+
+nmap <leader>rn <Plug>(coc-rename)
+nmap <silent> gf <Plug>(coc-definition)
+
+"<Tab> para navegar e <Ctrl-Space> para abrir popup de sugestão:
+
+" === Vim airline ==== "
+" Customize vim airline per filetype
+" 'nerdtree'  - Hide nerdtree status line
+" 'list'      - Only show file type plus current line number out of total
+let g:airline_filetype_overrides = {
+  \ 'nerdtree': [ get(g:, 'NERDTreeStatusline', ''), '' ],
+  \ 'list': [ '%y', '%l/%L'],
+  \ }
+
+
+
+function! s:custom_jarvis_colors()
+  " coc.nvim color changes
+  hi link CocErrorSign WarningMsg
+  hi link CocWarningSign Number
+  hi link CocInfoSign Type
+
+  " Make background transparent for many things
+  hi Normal ctermbg=NONE guibg=NONE
+  hi NonText ctermbg=NONE guibg=NONE
+  hi LineNr ctermfg=NONE guibg=NONE
+  hi SignColumn ctermfg=NONE guibg=NONE
+  hi StatusLine guifg=#16252b guibg=#6699CC
+  hi StatusLineNC guifg=#16252b guibg=#16252b
+
+  " Try to hide vertical spit and end of buffer symbol
+  hi VertSplit gui=NONE guifg=#17252c guibg=#17252c
+  hi EndOfBuffer ctermbg=NONE ctermfg=NONE guibg=#17252c guifg=#17252c
+
+  " Customize NERDTree directory
+  hi NERDTreeCWD guifg=#99c794
+
+  " Make background color transparent for git changes
+  hi SignifySignAdd guibg=NONE
+  hi SignifySignDelete guibg=NONE
+  hi SignifySignChange guibg=NONE
+
+  " Highlight git change signs
+  hi SignifySignAdd guifg=#99c794
+  hi SignifySignDelete guifg=#ec5f67
+  hi SignifySignChange guifg=#c594c5
+endfunction
+
+" Reload icons after init source
+if exists('g:loaded_webdevicons')
+  call webdevicons#refresh()
+endif
+
+
+""snips react"
+" fce 
+" sfce
+" ffce
+" useS -> usestate
+" useE -> effect
+"
+"
+"
+"
