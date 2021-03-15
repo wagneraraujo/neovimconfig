@@ -19,6 +19,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
 Plug 'rakr/vim-one'
+Plug 'arcticicestudio/nord-vim'
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 else
@@ -62,6 +63,7 @@ Plug 'sainnhe/sonokai'
 Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'mhartington/oceanic-next'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'mengelbrecht/lightline-bufferline'
 
 " Initialize plugin system
 call plug#end()
@@ -69,8 +71,8 @@ call plug#end()
 set t_Co=256
 set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme one "OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
 set background=dark
-colorscheme OceanicNext "night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
 "set notermguicolors
 set guifont=JetBrains\ Regular\ Font\ 11
 "set guifont=Hasklig
@@ -103,7 +105,6 @@ filetype plugin indent on
 set t_Co=256
 set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
-set background=dark
 "colorscheme embark "night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
 "set notermguicolors
 set guifont=JetBrains\ Regular\ Font\ 11
@@ -232,7 +233,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme ='oceanicnext'  " jellybeans  'bubblegum'   'powerlineish'
+let g:airline_theme ='one'  " jellybeans  'bubblegum'   'powerlineish'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -1014,3 +1015,27 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'tabline': {
+      \   'left': [ ['buffers'] ],
+      \   'right': [ ['close'] ]
+      \ },
+      \ 'component_expand': {
+      \   'buffers': 'lightline#bufferline#buffers'
+      \ },
+      \ 'component_type': {
+      \   'buffers': 'tabsel'
+      \ }
+      \ }
+let g:lightline#bufferline#show_number  = 1
+let g:lightline#bufferline#shorten_path = 0
+let g:lightline#bufferline#unnamed      = '[No Name]'
+
+let g:lightline                  = {}
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
