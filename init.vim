@@ -65,13 +65,35 @@ Plug 'mhartington/oceanic-next'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'mengelbrecht/lightline-bufferline'
 
-" Initialize plugin system
+Plug 'mhinz/vim-mix-format'
+Plug 'senran101604/neotrix.vim' "neotrix
+Plug 'ghifarit53/tokyonight-vim' " tokyonight
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'branch': 'release/1.x',
+  \ 'for': [
+      \ 'javascript',
+      \ 'typescript',
+      \ 'css',
+      \ 'less',
+      \ 'scss',
+      \ 'json',
+      \ 'graphql',
+      \ 'markdown',
+      \ 'vue',
+      \ 'yaml',
+      \ 'html'] }
+Plug 'sbdchd/neoformat'
+Plug 'hoob3rt/lualine.nvim'
+" If you want to have icons in your statusline choose one of these
+Plug 'kyazdani42/nvim-web-devicons'
+"Initialize plugin system
 call plug#end()
 
 set t_Co=256
 set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme one "OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
+colorscheme tokyonight "OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
 set background=dark
 "set notermguicolors
 set guifont=JetBrains\ Regular\ Font\ 11
@@ -1039,3 +1061,31 @@ let g:lightline                  = {}
 let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
 let g:lightline.component_type   = {'buffers': 'tabsel'}
+
+
+let g:lualine = {
+    \'options' : {
+    \  'theme' : 'gruvbox',
+    \  'section_separators' : ['', ''],
+    \  'component_separators' : ['', ''],
+    \  'icons_enabled' : v:true,
+    \},
+    \'sections' : {
+    \  'lualine_a' : [ ['mode', {'upper': v:true,},], ],
+    \  'lualine_b' : [ ['branch', {'icon': '',}, ], ],
+    \  'lualine_c' : [ ['filename', {'file_status': v:true,},], ],
+    \  'lualine_x' : [ 'encoding', 'fileformat', 'filetype' ],
+    \  'lualine_y' : [ 'progress' ],
+    \  'lualine_z' : [ 'location'  ],
+    \},
+    \'inactive_sections' : {
+    \  'lualine_a' : [  ],
+    \  'lualine_b' : [  ],
+    \  'lualine_c' : [ 'filename' ],
+    \  'lualine_x' : [ 'location' ],
+    \  'lualine_y' : [  ],
+    \  'lualine_z' : [  ],
+    \},
+    \'extensions' : [ 'fzf' ],
+    \}
+lua require("lualine").status()
