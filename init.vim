@@ -37,7 +37,7 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'plasticboy/vim-markdown'
-Plug 'ap/vim-css-color'
+
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'Valloric/MatchTagAlways'
 Plug 'wakatime/vim-wakatime'
@@ -50,7 +50,6 @@ Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 let g:coc_global_extensions = ['coc-css','coc-json','coc-fzf-preview','coc-stylelint','coc-tsserver']
-
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', {
@@ -63,11 +62,7 @@ Plug 'sainnhe/sonokai'
 Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'mhartington/oceanic-next'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'mengelbrecht/lightline-bufferline'
-
 Plug 'mhinz/vim-mix-format'
-Plug 'senran101604/neotrix.vim' "neotrix
-Plug 'ghifarit53/tokyonight-vim' " tokyonight
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'branch': 'release/1.x',
@@ -83,17 +78,38 @@ Plug 'prettier/vim-prettier', {
       \ 'vue',
       \ 'yaml',
       \ 'html'] }
-Plug 'sbdchd/neoformat'
-Plug 'hoob3rt/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
+Plug 'bluz71/vim-moonfly-colors'
+Plug 'yonlu/omni.vim' "omni
 Plug 'kyazdani42/nvim-web-devicons'
+
+"" Show latest changes and allow navigation - Leader-u
+Plug 'mbbill/undotree'
+
+"" Object/AST tag bar - F4
+Plug 'majutsushi/tagbar'
+"" Linter
+Plug 'w0rp/ale'
+"" Highlight word under cursor
+Plug 'RRethy/vim-illuminate'
+" Dispatch tasks to run async e.g: `:Dispatch PlugInstall`
+Plug 'tpope/vim-dispatch'
 "Initialize plugin system
+"Plug 'ms-jpq/chadtree'
+
+"" File/Buffer operations :Rename, :Move, :Delete, :Chmod, :SudoEdit
+    Plug 'tpope/vim-eunuch'
+
+   "" Delete instead of cut (cut is mapped to x, single char is dl)
+    Plug 'svermeulen/vim-cutlass'
+
+
 call plug#end()
 
 set t_Co=256
 set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme tokyonight "OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
+colorscheme one "OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
 set background=dark
 "set notermguicolors
 set guifont=JetBrains\ Regular\ Font\ 11
@@ -255,7 +271,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme ='one'  " jellybeans  'bubblegum'   'powerlineish'
+let g:airline_theme ='bubblegum'  " jellybeans  'bubblegum'   'powerlineish'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -818,6 +834,13 @@ set wildignore+=*node_modules/**
 
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 
+" Close others
+noremap <leader>ac :w <BAR> %bd <BAR> e# <BAR> bd# <CR>
+nmap <silent> <F3> :CHADopen<CR>
+" Show Tagbar
+nmap <silent> <F4> :TagbarToggle<CR>
+let g:tagbar_autofocus = 1               " Auto focus on tagbar
+
 
 "clear search selection
 set nohlsearch
@@ -942,7 +965,22 @@ endif
 "prettier 
 let g:prettier#config#config_precedence = 'file-override'
 let g:prettier#config#parser = ''
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
+set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
+set listchars+=tab:→→\|,space:.,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+
+" FZF and Rg settings for search
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
+let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
+if executable('rg')
+  let g:rg_derive_root='true'
+  let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
+  set grepprg=rg\ --vimgrep
+  command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+endif
+
+
 
 let g:coc_disable_startup_warning = 1
 
@@ -1038,7 +1076,7 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'bubblegum',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
       \ },
@@ -1057,35 +1095,14 @@ let g:lightline#bufferline#show_number  = 1
 let g:lightline#bufferline#shorten_path = 0
 let g:lightline#bufferline#unnamed      = '[No Name]'
 
-let g:lightline                  = {}
-let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
-let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
-let g:lightline.component_type   = {'buffers': 'tabsel'}
+" let g:lightline                  = {}
+" let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+" let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+" let g:lightline.component_type   = {'buffers': 'tabsel'}
 
 
-let g:lualine = {
-    \'options' : {
-    \  'theme' : 'gruvbox',
-    \  'section_separators' : ['', ''],
-    \  'component_separators' : ['', ''],
-    \  'icons_enabled' : v:true,
-    \},
-    \'sections' : {
-    \  'lualine_a' : [ ['mode', {'upper': v:true,},], ],
-    \  'lualine_b' : [ ['branch', {'icon': '',}, ], ],
-    \  'lualine_c' : [ ['filename', {'file_status': v:true,},], ],
-    \  'lualine_x' : [ 'encoding', 'fileformat', 'filetype' ],
-    \  'lualine_y' : [ 'progress' ],
-    \  'lualine_z' : [ 'location'  ],
-    \},
-    \'inactive_sections' : {
-    \  'lualine_a' : [  ],
-    \  'lualine_b' : [  ],
-    \  'lualine_c' : [ 'filename' ],
-    \  'lualine_x' : [ 'location' ],
-    \  'lualine_y' : [  ],
-    \  'lualine_z' : [  ],
-    \},
-    \'extensions' : [ 'fzf' ],
-    \}
-lua require("lualine").status()
+nnoremap <leader>v <cmd>CHADopen<cr>
+"Add a hotkey to clear quickfix list:
+nnoremap <leader>l <cmd>call setqflist([])<cr>
+
+
