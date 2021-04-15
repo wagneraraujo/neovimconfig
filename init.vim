@@ -101,9 +101,6 @@ Plug 'tpope/vim-dispatch'
 "" File/Buffer operations :Rename, :Move, :Delete, :Chmod, :SudoEdit
     Plug 'tpope/vim-eunuch'
 
-   "" Delete instead of cut (cut is mapped to x, single char is dl)
-    Plug 'svermeulen/vim-cutlass'
-
 
 call plug#end()
 
@@ -986,14 +983,6 @@ endif
 let g:coc_disable_startup_warning = 1
 
 
-"type cursor neovim
-"set guicursor=v-c-sm:block,n-i-ci-ve:ver25,r-cr-o:hor20
-highlight Cursor guifg=white guibg=gray
-highlight iCursor guifg=white guibg=white
-set guicursor=n-v-c:block-Cursor
-set guicursor+=i:ver100-iCursor
-set guicursor+=n-v-c:blinkon0
-set guicursor+=i:blinkwait10
 
 
 nmap <leader>rn <Plug>(coc-rename)
@@ -1196,3 +1185,22 @@ let g:mkdp_page_title = '「${name}」'
 " recognized filetypes
 " these filetypes will have MarkdownPreview... commands
 let g:mkdp_filetypes = ['markdown']
+
+
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
+"set guicursor=v-c-sm:block,n-i-ci-ve:ver25,r-cr-o:hor20
+highlight Cursor guifg=white guibg=orange
+highlight iCursor guifg=white guibg=white
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:ver100-iCursor
+set guicursor+=n-v-c:blinkon0
+set guicursor+=i:blinkwait10
+"type cursor neovim
+
+autocmd OptionSet guicursor noautocmd set guicursor=
+au VimEnter,VimResume * set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
+  \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
+  \,sm:block-blinkwait185-blinkoff180-blinkon185
+
+au VimLeave,VimSuspend * set guicursor=a:block-blinkon0
