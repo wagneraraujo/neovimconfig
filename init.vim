@@ -50,7 +50,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-let g:coc_global_extensions = ['coc-css','coc-json','coc-fzf-preview','coc-stylelint','coc-tsserver']
+let g:coc_global_extensions = ['coc-css','coc-json','coc-fzf-preview','coc-stylelint','coc-tsserver', 'coc-styled-components', 'coc-vetur','coc-cssmodules', 'coc-emmet', 'coc-eslint', 'coc-graphql','coc-html', 'coc-phpls']
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', {
@@ -110,7 +110,7 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme one "OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
 set background=dark
 "set notermguicolors
-set guifont=JetBrains\ Regular\ Font\ 11
+set guifont=monoid\ Regular\ Font\ 11
 "set guifont=Hasklig
 "set guifont=Hasklig:h26
 
@@ -143,7 +143,7 @@ set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
 "colorscheme embark "night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
 "set notermguicolors
-set guifont=JetBrains\ Regular\ Font\ 11
+set guifont=monoid\ Regular\ Font\ 11
 "set guifont=Hasklig
 "set guifont=Hasklig:h26
 
@@ -866,7 +866,7 @@ function! CleanExtraSpaces() "Function to clean unwanted spaces
     call setreg('/', old_query)
 endfun
 
-set guifont="JetBrains Mono"
+set guifont="monoid"
 let g:embark_termcolors=256
 let NVIM_TUI_ENABLE_TRUE_COLOR=1
 set fillchars+=vert:\
@@ -1204,3 +1204,15 @@ au VimEnter,VimResume * set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor
   \,sm:block-blinkwait185-blinkoff180-blinkon185
 
 au VimLeave,VimSuspend * set guicursor=a:block-blinkon0
+
+
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
