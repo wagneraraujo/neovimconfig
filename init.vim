@@ -38,7 +38,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-
+Plug 'pseewald/vim-anyfold'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'Valloric/MatchTagAlways'
 Plug 'wakatime/vim-wakatime'
@@ -50,7 +50,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-let g:coc_global_extensions = ['coc-css','coc-json','coc-fzf-preview','coc-stylelint','coc-tsserver', 'coc-styled-components', 'coc-vetur','coc-cssmodules', 'coc-emmet', 'coc-eslint', 'coc-graphql','coc-html', 'coc-phpls']
+let g:coc_global_extensions = ['coc-css','coc-json','coc-fzf-preview','coc-stylelint','coc-tsserver', 'coc-styled-components', 'coc-vetur','coc-cssmodules', 'coc-emmet', 'coc-eslint', 'coc-graphql','coc-html', 'coc-phpls','coc-vetur']
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', {
@@ -83,10 +83,6 @@ Plug 'prettier/vim-prettier', {
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'yonlu/omni.vim' "omni
 Plug 'kyazdani42/nvim-web-devicons'
-
-"" Show latest changes and allow navigation - Leader-u
-Plug 'mbbill/undotree'
-
 "" Object/AST tag bar - F4
 Plug 'majutsushi/tagbar'
 "" Linter
@@ -99,7 +95,7 @@ Plug 'tpope/vim-dispatch'
 "Plug 'ms-jpq/chadtree'
 
 "" File/Buffer operations :Rename, :Move, :Delete, :Chmod, :SudoEdit
-    Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-eunuch'
 
 
 call plug#end()
@@ -107,10 +103,10 @@ call plug#end()
 set t_Co=256
 set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme one "OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
+colorscheme omni "OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
 set background=dark
 "set notermguicolors
-set guifont=monoid\ Regular\ Font\ 11
+" set guifont=monoid\ Regular\ Font\ 11
 "set guifont=Hasklig
 "set guifont=Hasklig:h26
 
@@ -269,7 +265,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme ='bubblegum'  " jellybeans  'bubblegum'   'powerlineish'
+let g:airline_theme ='moonfly'  " jellybeans  'bubblegum'   'powerlineish'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -298,7 +294,7 @@ let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowBookmarks=0
 let g:nerdtree_tabs_focus_on_files=0
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 20
+let g:NERDTreeWinSize = 30
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <C-]> :NERDTreeFind<CR>
 nnoremap <silent> <C-\> :NERDTreeToggle<CR>
@@ -729,8 +725,6 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 ":AnyFoldActivate -> [[  ]]  [j [k
 let g:anyfold_fold_comments=1
 set foldlevel=0
-hi Folded term=NONE cterm=NONE
-hi Folded term=underline
 autocmd Filetype cpp set foldignore=#/
 
 "ctags e autoimport
@@ -1066,7 +1060,7 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 let g:lightline = {
-      \ 'colorscheme': 'bubblegum',
+      \ 'colorscheme': 'moonfly',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
       \ },
@@ -1216,3 +1210,18 @@ inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()
+
+
+
+" configs for moonfly theme
+let g:moonflyCursorColor = 1
+let g:moonflyTerminalColors = 0
+let g:moonflyUnderlineMatchParen = 1
+let g:moonflyUndercurls = 0
+let g:moonflyItalics = 0
+
+
+"fold => zE zF za zd 
+set wildoptions=pum
+highlight Folded guibg=darkolivegreen1 guifg=black
+highlight FoldColumn guibg=darkseagreen4 guifg=white
