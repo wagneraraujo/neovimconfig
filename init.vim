@@ -96,14 +96,18 @@ Plug 'tpope/vim-dispatch'
 
 "" File/Buffer operations :Rename, :Move, :Delete, :Chmod, :SudoEdit
 Plug 'tpope/vim-eunuch'
-
+Plug 'romgrk/github-light.vim'
+Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'sainnhe/edge'
 
 call plug#end()
 
 set t_Co=256
 set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme omni "OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
+colorscheme edge
+"edge github_light nightfly OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
+let g:airline_theme ='edge'  " jellybeans  'bubblegum'   'powerlineish'
 set background=dark
 "set notermguicolors
 " set guifont=monoid\ Regular\ Font\ 11
@@ -265,7 +269,6 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme ='moonfly'  " jellybeans  'bubblegum'   'powerlineish'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -1222,6 +1225,20 @@ let g:moonflyItalics = 0
 
 
 "fold => zE zF za zd 
+"zo	open current fold
+" /* zO	recursively open current fold
+"zzc	close current fold
+"zC	recursively close current fold
+"za	toggle current fold
+"zA	recursively open/close current fold
+"zm	reduce foldlevel by one
+"zM	close all folds
+"zr	increase foldlevel by one
+"zR	open all folds
+"
+"
 set wildoptions=pum
 highlight Folded guibg=darkolivegreen1 guifg=black
 highlight FoldColumn guibg=darkseagreen4 guifg=white
+let g:markdown_folding = 1
+
