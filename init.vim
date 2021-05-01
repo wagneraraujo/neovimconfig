@@ -102,14 +102,16 @@ Plug 'romgrk/github-light.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'sainnhe/edge'
 Plug 'junegunn/goyo.vim'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+
 call plug#end()
 
 set t_Co=256
 set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme edge
-"edge github_light nightfly OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
-let g:airline_theme ='edge'  " jellybeans  'bubblegum'   'powerlineish'
+colorscheme challenger_deep
+"challenger_deep edge github_light nightfly OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
+let g:airline_theme ='challenger_deep'  " jellybeans  'bubblegum'   'powerlineish'
 set background=dark
 "set notermguicolors
 " set guifont=monoid\ Regular\ Font\ 11
