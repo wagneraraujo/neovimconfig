@@ -103,14 +103,15 @@ Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'sainnhe/edge'
 Plug 'junegunn/goyo.vim'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 set t_Co=256
 set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme challenger_deep
-"challenger_deep edge github_light nightfly OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
+"gruvbox PaperColor challenger_deep edge github_light nightfly OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
 let g:airline_theme ='challenger_deep'  " jellybeans  'bubblegum'   'powerlineish'
 set background=dark
 "set notermguicolors
