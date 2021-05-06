@@ -6,10 +6,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'frazrepo/vim-rainbow'
 Plug 'leafOfTree/vim-vue-plugin'
 Plug 'junegunn/vim-easy-align'
-Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+"Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+"Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -18,10 +18,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'itchyny/vim-gitbranch'
 Plug 'airblade/vim-gitgutter'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
-Plug 'rakr/vim-one'
-Plug 'arcticicestudio/nord-vim'
+"Plug 'rakr/vim-one'
+"Plug 'arcticicestudio/nord-vim'
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 else
@@ -32,7 +32,6 @@ let g:make = 'gmake'
 if exists('make')
         let g:make = 'make'
 endif
-Plug 'gorodinskiy/vim-coloresque'
 Plug 'tpope/vim-haml'
 Plug 'mattn/emmet-vim'
 Plug 'jelera/vim-javascript-syntax'
@@ -58,7 +57,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'branch': 'release/1.x',
-  \ 'for': ['javascript', 'php', 'typescript', 'css','sass', 'styled-components','less', 'scss', 'json',   'vue', 'yaml', 'html'] }
+  \ 'for': ['javascript', 'php', 'typescript', 'css','sass', 'styled-components','less', 'scss', 'json', 'vue', 'yaml', 'html'] }
 Plug 'joshdick/onedark.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sainnhe/sonokai'
@@ -82,29 +81,27 @@ Plug 'prettier/vim-prettier', {
       \ 'yaml',
       \ 'html'] }
 " If you want to have icons in your statusline choose one of these
-Plug 'bluz71/vim-moonfly-colors'
 Plug 'yonlu/omni.vim' "omni
-Plug 'kyazdani42/nvim-web-devicons'
 "" Object/AST tag bar - F4
-Plug 'majutsushi/tagbar'
 "" Linter
 Plug 'w0rp/ale'
 "" Highlight word under cursor
-Plug 'RRethy/vim-illuminate'
+"Plug 'RRethy/vim-illuminate'
 " Dispatch tasks to run async e.g: `:Dispatch PlugInstall`
 Plug 'tpope/vim-dispatch'
 "Initialize plugin system
 "Plug 'ms-jpq/chadtree'
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 
 "" File/Buffer operations :Rename, :Move, :Delete, :Chmod, :SudoEdit
 Plug 'tpope/vim-eunuch'
-Plug 'romgrk/github-light.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'sainnhe/edge'
-Plug 'junegunn/goyo.vim'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'morhetz/gruvbox'
+Plug 'pantharshit00/vim-prisma'
+
 call plug#end()
 
 set t_Co=256
@@ -148,7 +145,6 @@ set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
 "colorscheme embark "night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
 "set notermguicolors
-set guifont=monoid\ Regular\ Font\ 11
 "set guifont=Hasklig
 "set guifont=Hasklig:h26
 
@@ -303,7 +299,7 @@ let g:NERDTreeShowBookmarks=0
 let g:nerdtree_tabs_focus_on_files=0
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 30
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite,.git
 nnoremap <silent> <C-]> :NERDTreeFind<CR>
 nnoremap <silent> <C-\> :NERDTreeToggle<CR>
 
@@ -1010,37 +1006,37 @@ let g:airline_filetype_overrides = {
 
 
 
-function! s:custom_jarvis_colors()
-  " coc.nvim color changes
-  hi link CocErrorSign WarningMsg
-  hi link CocWarningSign Number
-  hi link CocInfoSign Type
+" function! s:custom_jarvis_colors()
+"   " coc.nvim color changes
+"   hi link CocErrorSign WarningMsg
+"   hi link CocWarningSign Number
+"   hi link CocInfoSign Type
 
-  " Make background transparent for many things
-  hi Normal ctermbg=NONE guibg=NONE
-  hi NonText ctermbg=NONE guibg=NONE
-  hi LineNr ctermfg=NONE guibg=NONE
-  hi SignColumn ctermfg=NONE guibg=NONE
-  hi StatusLine guifg=#16252b guibg=#6699CC
-  hi StatusLineNC guifg=#16252b guibg=#16252b
+"   " Make background transparent for many things
+"   hi Normal ctermbg=NONE guibg=NONE
+"   hi NonText ctermbg=NONE guibg=NONE
+"   hi LineNr ctermfg=NONE guibg=NONE
+"   hi SignColumn ctermfg=NONE guibg=NONE
+"   hi StatusLine guifg=#16252b guibg=#6699CC
+"   hi StatusLineNC guifg=#16252b guibg=#16252b
 
-  " Try to hide vertical spit and end of buffer symbol
-  hi VertSplit gui=NONE guifg=#17252c guibg=#17252c
-  hi EndOfBuffer ctermbg=NONE ctermfg=NONE guibg=#17252c guifg=#17252c
+"   " Try to hide vertical spit and end of buffer symbol
+"   hi VertSplit gui=NONE guifg=#17252c guibg=#17252c
+"   hi EndOfBuffer ctermbg=NONE ctermfg=NONE guibg=#17252c guifg=#17252c
 
-  " Customize NERDTree directory
-  hi NERDTreeCWD guifg=#99c794
+"   " Customize NERDTree directory
+"   hi NERDTreeCWD guifg=#99c794
 
-  " Make background color transparent for git changes
-  hi SignifySignAdd guibg=NONE
-  hi SignifySignDelete guibg=NONE
-  hi SignifySignChange guibg=NONE
+"   " Make background color transparent for git changes
+"   hi SignifySignAdd guibg=NONE
+"   hi SignifySignDelete guibg=NONE
+"   hi SignifySignChange guibg=NONE
 
-  " Highlight git change signs
-  hi SignifySignAdd guifg=#99c794
-  hi SignifySignDelete guifg=#ec5f67
-  hi SignifySignChange guifg=#c594c5
-endfunction
+"   " Highlight git change signs
+"   hi SignifySignAdd guifg=#99c794
+"   hi SignifySignDelete guifg=#ec5f67
+"   hi SignifySignChange guifg=#c594c5
+" endfunction
 
 " Reload icons after init source
 if exists('g:loaded_webdevicons')
@@ -1295,4 +1291,8 @@ let g:vim_vue_plugin_config = {
       \'foldexpr': 0,
       \'debug': 0,
       \}
+
+
+set path+=**                                                                    
+set wildignore+=**/node_modules/**
 
