@@ -8,8 +8,8 @@ Plug 'leafOfTree/vim-vue-plugin'
 Plug 'junegunn/vim-easy-align'
 "Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-"Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+" Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -20,7 +20,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
-"Plug 'rakr/vim-one'
+Plug 'rakr/vim-one'
 "Plug 'arcticicestudio/nord-vim'
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -39,11 +39,11 @@ Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-Plug 'pseewald/vim-anyfold'
+" Plug 'pseewald/vim-anyfold'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'Valloric/MatchTagAlways'
 Plug 'wakatime/vim-wakatime'
-Plug 'jparise/vim-graphql'
+" Plug 'jparise/vim-graphql'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'mxw/vim-jsx'
@@ -59,10 +59,10 @@ Plug 'prettier/vim-prettier', {
   \ 'branch': 'release/1.x',
   \ 'for': ['javascript', 'php', 'typescript', 'css','sass', 'styled-components','less', 'scss', 'json', 'vue', 'yaml', 'html'] }
 Plug 'joshdick/onedark.vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'sainnhe/sonokai'
-Plug 'embark-theme/vim', { 'as': 'embark' }
-Plug 'mhartington/oceanic-next'
+" Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'sainnhe/sonokai'
+" Plug 'embark-theme/vim', { 'as': 'embark' }
+" Plug 'mhartington/oceanic-next'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'mhinz/vim-mix-format'
 Plug 'prettier/vim-prettier', {
@@ -86,20 +86,20 @@ Plug 'yonlu/omni.vim' "omni
 "" Linter
 Plug 'w0rp/ale'
 "" Highlight word under cursor
-"Plug 'RRethy/vim-illuminate'
+" Plug 'RRethy/vim-illuminate'
 " Dispatch tasks to run async e.g: `:Dispatch PlugInstall`
 Plug 'tpope/vim-dispatch'
 "Initialize plugin system
 "Plug 'ms-jpq/chadtree'
-Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+" Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 
 "" File/Buffer operations :Rename, :Move, :Delete, :Chmod, :SudoEdit
 Plug 'tpope/vim-eunuch'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'sainnhe/edge'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'morhetz/gruvbox'
+" Plug 'NLKNguyen/papercolor-theme'
+" Plug 'morhetz/gruvbox'
 Plug 'pantharshit00/vim-prisma'
 
 call plug#end()
@@ -107,10 +107,12 @@ call plug#end()
 set t_Co=256
 set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme challenger_deep
+colorscheme one
 "gruvbox PaperColor challenger_deep edge github_light nightfly OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
-let g:airline_theme ='challenger_deep'  " jellybeans  'bubblegum'   'powerlineish'
-set background=dark
+let g:airline_theme ='one'  " jellybeans  'bubblegum'   'powerlineish'
+set background=light
+let g:one_allow_italics = 1 " I love italic for comments
+
 "set notermguicolors
 " set guifont=monoid\ Regular\ Font\ 11
 "set guifont=Hasklig
@@ -1293,6 +1295,8 @@ let g:vim_vue_plugin_config = {
       \}
 
 
-set path+=**                                                                    
 set wildignore+=**/node_modules/**
+set wildignore+=**/.git/**
 
+" erro -> eslint not approved or deniet
+" CocCommand eslint.showOutputChannel
