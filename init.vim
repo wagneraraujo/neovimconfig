@@ -38,7 +38,7 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'plasticboy/vim-markdown'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 " Plug 'pseewald/vim-anyfold'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'Valloric/MatchTagAlways'
@@ -47,11 +47,11 @@ Plug 'wakatime/vim-wakatime'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'mxw/vim-jsx'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-let g:coc_global_extensions = ['coc-css','coc-json','coc-fzf-preview','coc-stylelint','coc-tsserver', 'coc-styled-components', 'coc-vetur','coc-cssmodules', 'coc-emmet', 'coc-eslint', 'coc-graphql','coc-html', 'coc-phpls','coc-vetur']
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_extensions = ['coc-css','coc-json','coc-fzf-preview','coc-styled-components', 'coc-vetur', 'coc-emmet', 'coc-eslint' ]
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', {
@@ -101,6 +101,11 @@ Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'morhetz/gruvbox'
 Plug 'pantharshit00/vim-prisma'
+Plug 'Th3Whit3Wolf/one-nvim'
+Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
+" Plug 'nikvdp/ejs-syntax'
+
+
 
 call plug#end()
 
@@ -109,8 +114,8 @@ set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme one
 "gruvbox PaperColor challenger_deep edge github_light nightfly OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
-let g:airline_theme ='one'  " jellybeans  'bubblegum'   'powerlineish'
-set background=light
+let g:airline_theme ='nightfly'  " jellybeans  'bubblegum'   'powerlineish'
+set background=dark
 let g:one_allow_italics = 1 " I love italic for comments
 
 "set notermguicolors
@@ -125,7 +130,6 @@ let g:one_allow_italics = 1 " I love italic for comments
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
-set ttyfast
 set wildmenu
 "" Fix backspace indent
 set backspace=indent,eol,start
@@ -138,9 +142,13 @@ set shiftwidth=2
 set expandtab
 "set relativenumber
 set confirm
-
+set exrc                                                  " exec command in init.vim
+set secure                                                " safely do command above
+"set autochdir           
 filetype plugin indent on
-
+set noexpandtab                                           " use only '\t' as tab
+set scrolloff=4             
+set visualbell                          
 """theme""""
 set t_Co=256
 set termguicolors     " enable true colors support
@@ -498,36 +506,27 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
-
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
 vmap > >gv
-
 "" Move visual block
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-
 "" Open current line on GitHub
 nnoremap <Leader>o :.Gbrowse<CR>
-
 "*****************************************************************************
 "" Custom configs
 "*****************************************************************************
 " html
 " for html files, 2 spaces
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
-
-
 " javascript
 let g:javascript_enable_domhtmlcss = 1
-
 " vim-javascript
 augroup vimrc-javascript
   autocmd!
   autocmd FileType javascript setl tabstop=2|setl shiftwidth=2|setl expandtab softtabstop=2
 augroup END
-
-
 " vim-python
 augroup vimrc-python
   autocmd!
@@ -591,14 +590,14 @@ if !exists('g:airline_powerline_fonts')
   let g:airline_left_alt_sep      = '»'
   let g:airline_right_sep         = '◀'
   let g:airline_right_alt_sep     = '«'
-  let g:airline#extensions#branch#prefix     = '⤴' "➔, ➥, ⎇
+  let g:airline#extensions#branch#prefix     = '' "➔, ➥, ⎇
   let g:airline#extensions#readonly#symbol   = '⊘'
   let g:airline#extensions#linecolumn#prefix = '¶'
-  let g:airline#extensions#paste#symbol      = 'ρ'
-  let g:airline_symbols.linenr    = '␊'
+  let g:airline#extensions#paste#symbol      = ''
+  let g:airline_symbols.linenr    = ''
   let g:airline_symbols.branch    = '⎇'
-  let g:airline_symbols.paste     = 'ρ'
-  let g:airline_symbols.paste     = 'Þ'
+  let g:airline_symbols.paste     = ''
+  let g:airline_symbols.paste     = ''
   let g:airline_symbols.paste     = '∥'
   let g:airline_symbols.whitespace = 'Ξ'
 else
@@ -612,8 +611,9 @@ else
   let g:airline_right_alt_sep = ''
   let g:airline_symbols.branch = ''
   let g:airline_symbols.readonly = ''
-  let g:airline_symbols.linenr = ''
+  let g:airline_symbols.linenr = ''
 endif
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 
 " Use CTRL-S for saving, also in Insert mode
@@ -718,11 +718,6 @@ let g:mta_filetypes = {
     \ 'jsx' : 1,
     \ 'ejs' : 1,
     \}
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gt <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nmap <leader>rn <Plug>(coc-rename)
 
 " The Silver Searcher
 if executable('ag')
@@ -748,12 +743,12 @@ let g:prettier#autoformat =0
 let g:prettier#autoformat_config_present = 1
 let g:prettier#quickfix_enabled =1
 "autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.vue PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.php,*.ejs,*.css,*.less,*.scss,*.json,*.vue PrettierAsync
 
 
 " use a different style
 " valid values: 'default' (default), 'darker', 'pure'
-let g:equinusocio_material_style = 'darker'
+let g:equinusocio_material_style = 'default'
 
 " less bright
 " which means some colors will be modified by this formula:
@@ -794,11 +789,8 @@ nnoremap <c-x> :bp\|bd #<cr>
 ":sbp : Open previous buffer in a split
 ":sba : Open all buffers in split windows
 
-
 "defx-icons
 set tabstop=2 softtabstop=2 expandtab shiftwidth=2
-
-
 "autocompletion 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
@@ -820,7 +812,7 @@ let g:jsx_pragma_required = 1
 
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
-let g:tagalong_filetypes = ['html','js','javascript','jsx','jsx','ts','php']
+let g:tagalong_filetypes = ['html','js','javascript','jsx','jsx','ts','php','vue']
 
 
 set cursorline
@@ -836,33 +828,24 @@ let g:js_file_import_sort_after_insert = 1
 let g:js_file_import_prompt_if_no_tag = 0
 let g:js_file_import_use_fzf = 1
 set wildignore+=*node_modules/**
-
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
-
 " Close others
 noremap <leader>ac :w <BAR> %bd <BAR> e# <BAR> bd# <CR>
 nmap <silent> <F3> :CHADopen<CR>
 " Show Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1               " Auto focus on tagbar
-
-
 "clear search selection
 set nohlsearch
-
 " Permite que o cursor acompanhe a rolagem da tela
 let g:comfortable_motion_scroll_down_key = "j"
 let g:comfortable_motion_scroll_up_key = "k"
 nnoremap <F9> :so $MYVIMRC<cr>
-
-
 iabbrev lenght length
 iabbrev widht width
 iabbrev heigth height
-
 "configs para o youcompleteme
 let g:ycm_autoclose_preview_window_after_completion=1
-
 let g:rehash256 = 1
 
 function! CleanExtraSpaces() "Function to clean unwanted spaces
@@ -873,7 +856,7 @@ function! CleanExtraSpaces() "Function to clean unwanted spaces
     call setreg('/', old_query)
 endfun
 
-set guifont="monoid"
+" set guifont="monoid"
 let g:embark_termcolors=256
 let NVIM_TUI_ENABLE_TRUE_COLOR=1
 set fillchars+=vert:\
@@ -923,7 +906,7 @@ let g:fzf_action = {
 
 
 "new config relationed coc
-set updatetime=300
+set updatetime=500
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
@@ -951,11 +934,11 @@ function! s:check_back_space() abort
 endfunction
 
 " Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
+" if has('nvim')
+"   inoremap <silent><expr> <c-space> coc#refresh()
+" else
+"   inoremap <silent><expr> <c-@> coc#refresh()
+" endif
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
 " position. Coc only does snippet and additional edit on confirm.
@@ -970,7 +953,7 @@ endif
 "prettier 
 let g:prettier#config#config_precedence = 'file-override'
 let g:prettier#config#parser = ''
-"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
+" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 set listchars+=tab:→→\|,space:.,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 
@@ -987,7 +970,6 @@ endif
 
 
 
-let g:coc_disable_startup_warning = 1
 
 
 
@@ -1008,37 +990,37 @@ let g:airline_filetype_overrides = {
 
 
 
-" function! s:custom_jarvis_colors()
-"   " coc.nvim color changes
-"   hi link CocErrorSign WarningMsg
-"   hi link CocWarningSign Number
-"   hi link CocInfoSign Type
+function! s:custom_jarvis_colors()
+  " coc.nvim color changes
+  hi link CocErrorSign WarningMsg
+  hi link CocWarningSign Number
+  hi link CocInfoSign Type
 
-"   " Make background transparent for many things
-"   hi Normal ctermbg=NONE guibg=NONE
-"   hi NonText ctermbg=NONE guibg=NONE
-"   hi LineNr ctermfg=NONE guibg=NONE
-"   hi SignColumn ctermfg=NONE guibg=NONE
-"   hi StatusLine guifg=#16252b guibg=#6699CC
-"   hi StatusLineNC guifg=#16252b guibg=#16252b
+  " Make background transparent for many things
+  hi Normal ctermbg=NONE guibg=NONE
+  hi NonText ctermbg=NONE guibg=NONE
+  hi LineNr ctermfg=NONE guibg=NONE
+  hi SignColumn ctermfg=NONE guibg=NONE
+  hi StatusLine guifg=#16252b guibg=#6699CC
+  hi StatusLineNC guifg=#16252b guibg=#16252b
 
-"   " Try to hide vertical spit and end of buffer symbol
-"   hi VertSplit gui=NONE guifg=#17252c guibg=#17252c
-"   hi EndOfBuffer ctermbg=NONE ctermfg=NONE guibg=#17252c guifg=#17252c
+  " Try to hide vertical spit and end of buffer symbol
+  hi VertSplit gui=NONE guifg=#17252c guibg=#17252c
+  hi EndOfBuffer ctermbg=NONE ctermfg=NONE guibg=#17252c guifg=#17252c
 
-"   " Customize NERDTree directory
-"   hi NERDTreeCWD guifg=#99c794
+  " Customize NERDTree directory
+  hi NERDTreeCWD guifg=#99c794
 
-"   " Make background color transparent for git changes
-"   hi SignifySignAdd guibg=NONE
-"   hi SignifySignDelete guibg=NONE
-"   hi SignifySignChange guibg=NONE
+  " Make background color transparent for git changes
+  hi SignifySignAdd guibg=NONE
+  hi SignifySignDelete guibg=NONE
+  hi SignifySignChange guibg=NONE
 
-"   " Highlight git change signs
-"   hi SignifySignAdd guifg=#99c794
-"   hi SignifySignDelete guifg=#ec5f67
-"   hi SignifySignChange guifg=#c594c5
-" endfunction
+  " Highlight git change signs
+  hi SignifySignAdd guifg=#99c794
+  hi SignifySignDelete guifg=#ec5f67
+  hi SignifySignChange guifg=#c594c5
+endfunction
 
 " Reload icons after init source
 if exists('g:loaded_webdevicons')
@@ -1073,7 +1055,7 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 let g:lightline = {
-      \ 'colorscheme': 'moonfly',
+      \ 'colorscheme': 'one',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
       \ },
@@ -1093,8 +1075,8 @@ let g:lightline#bufferline#shorten_path = 0
 let g:lightline#bufferline#unnamed      = '[No Name]'
 
 " let g:lightline                  = {}
-" let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
-" let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
 " let g:lightline.component_type   = {'buffers': 'tabsel'}
 
 
@@ -1105,38 +1087,31 @@ nnoremap <leader>l <cmd>call setqflist([])<cr>
 " set to 1, nvim will open the preview window after entering the markdown buffer
 " default: 0
 let g:mkdp_auto_start = 0
-
 " set to 1, the nvim will auto close current preview window when change
 " from markdown buffer to another buffer
 " default: 1
 let g:mkdp_auto_close = 1
-
 " set to 1, the vim will refresh markdown when save the buffer or
 " leave from insert mode, default 0 is auto refresh markdown as you edit or
 " move the cursor
 " default: 0
 let g:mkdp_refresh_slow = 0
-
 " set to 1, the MarkdownPreview command can be use for all files,
 " by default it can be use in markdown file
 " default: 0
 let g:mkdp_command_for_global = 0
-
 " set to 1, preview server available to others in your network
 " by default, the server listens on localhost (127.0.0.1)
 " default: 0
 let g:mkdp_open_to_the_world = 0
-
 " use custom IP to open preview page
 " useful when you work in remote vim and preview on local browser
 " more detail see: https://github.com/iamcco/markdown-preview.nvim/pull/9
 " default empty
 let g:mkdp_open_ip = ''
-
 " specify browser to open preview page
 " default: ''
 let g:mkdp_browser = ''
-
 " set to 1, echo preview page url in command line when open preview page
 " default is 0
 let g:mkdp_echo_preview_url = 0
@@ -1185,7 +1160,7 @@ let g:mkdp_highlight_css = ''
 " use a custom port to start server or random for empty
 let g:mkdp_port = ''
 
-" preview page title
+" preview pageoc
 " ${name} will be replace with the file name
 let g:mkdp_page_title = '「${name}」'
 
@@ -1300,3 +1275,61 @@ set wildignore+=**/.git/**
 
 " erro -> eslint not approved or deniet
 " CocCommand eslint.showOutputChannel
+"
+"disable ctrl +z close neovim
+nnoremap <c-z> <nop>
+
+"====================== coc config ======================================
+
+nmap <leader>rn <Plug>(coc-rename)
+let g:coc_disable_startup_warning = 1
+set updatetime=300
+set shortmess+=c
+set cmdheight=2
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("nvim-0.5.0") || has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder.
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+au BufNewFile,BufRead *.ejs set filetype=html
+
