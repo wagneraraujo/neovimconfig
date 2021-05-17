@@ -6,10 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'frazrepo/vim-rainbow'
 Plug 'leafOfTree/vim-vue-plugin'
 Plug 'junegunn/vim-easy-align'
-"Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-" Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -18,10 +15,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'itchyny/vim-gitbranch'
 Plug 'airblade/vim-gitgutter'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-" Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
 Plug 'rakr/vim-one'
-"Plug 'arcticicestudio/nord-vim'
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 else
@@ -39,15 +34,15 @@ Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'plasticboy/vim-markdown'
 " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-" Plug 'pseewald/vim-anyfold'
+Plug 'pseewald/vim-anyfold'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'Valloric/MatchTagAlways'
 Plug 'wakatime/vim-wakatime'
-" Plug 'jparise/vim-graphql'
+Plug 'jparise/vim-graphql'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'mxw/vim-jsx'
-" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -59,11 +54,7 @@ Plug 'prettier/vim-prettier', {
   \ 'branch': 'release/1.x',
   \ 'for': ['javascript', 'php', 'typescript', 'css','sass', 'styled-components','less', 'scss', 'json', 'vue', 'yaml', 'html'] }
 Plug 'joshdick/onedark.vim'
-" Plug 'dracula/vim', { 'as': 'dracula' }
-" Plug 'sainnhe/sonokai'
-" Plug 'embark-theme/vim', { 'as': 'embark' }
-" Plug 'mhartington/oceanic-next'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'mhinz/vim-mix-format'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
@@ -80,31 +71,28 @@ Plug 'prettier/vim-prettier', {
       \ 'vue',
       \ 'yaml',
       \ 'html'] }
-" If you want to have icons in your statusline choose one of these
-Plug 'yonlu/omni.vim' "omni
-"" Object/AST tag bar - F4
-"" Linter
 Plug 'w0rp/ale'
-"" Highlight word under cursor
-" Plug 'RRethy/vim-illuminate'
-" Dispatch tasks to run async e.g: `:Dispatch PlugInstall`
 Plug 'tpope/vim-dispatch'
-"Initialize plugin system
-"Plug 'ms-jpq/chadtree'
-" Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
-
-"" File/Buffer operations :Rename, :Move, :Delete, :Chmod, :SudoEdit
 Plug 'tpope/vim-eunuch'
-Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'sainnhe/edge'
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'morhetz/gruvbox'
 Plug 'pantharshit00/vim-prisma'
-Plug 'Th3Whit3Wolf/one-nvim'
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 " Plug 'nikvdp/ejs-syntax'
 
+
+" themes neovim
+" srcery-colors/srcery-vim
+Plug 'yonlu/omni.vim' "omni
+Plug 'sainnhe/edge'
+Plug 'Th3Whit3Wolf/one-nvim'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'srcery-colors/srcery-vim'
+" Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'sainnhe/sonokai'
+" Plug 'embark-theme/vim', { 'as': 'embark' }
+" Plug 'mhartington/oceanic-next'
 
 
 call plug#end()
@@ -112,11 +100,14 @@ call plug#end()
 set t_Co=256
 set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme one
+colorscheme srcery
 "gruvbox PaperColor challenger_deep edge github_light nightfly OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
-let g:airline_theme ='nightfly'  " jellybeans  'bubblegum'   'powerlineish'
+let g:airline_theme ='srcery'  " jellybeans  'bubblegum'   'powerlineish'
 set background=dark
 let g:one_allow_italics = 1 " I love italic for comments
+let g:srcery_italic = 1
+let g:srcery_italic = 1
+
 
 "set notermguicolors
 " set guifont=monoid\ Regular\ Font\ 11
@@ -125,7 +116,11 @@ let g:one_allow_italics = 1 " I love italic for comments
 
 "*****************************************************************************
 "" Basic Setup
-"*****************************************************************************"
+"title*****************************************************************************"
+
+set shada="NONE"
+set re=1
+
 "" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
