@@ -1,8 +1,3 @@
-
-
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 Plug 'frazrepo/vim-rainbow'
 Plug 'leafOfTree/vim-vue-plugin'
@@ -79,21 +74,20 @@ Plug 'tpope/vim-eunuch'
 " Plug 'morhetz/gruvbox'
 Plug 'pantharshit00/vim-prisma'
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
-" Plug 'nikvdp/ejs-syntax'
-
-
+Plug 'nikvdp/ejs-syntax'
 " themes neovim
 " srcery-colors/srcery-vim
-Plug 'yonlu/omni.vim' "omni
+" Plug 'yonlu/omni.vim' "omni
 Plug 'sainnhe/edge'
 Plug 'Th3Whit3Wolf/one-nvim'
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+" Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'srcery-colors/srcery-vim'
 " Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'sainnhe/sonokai'
 " Plug 'embark-theme/vim', { 'as': 'embark' }
 " Plug 'mhartington/oceanic-next'
-
-
+Plug 'antoinemadec/FixCursorHold.nvim'
+Plug 'rust-lang/rust.vim'
+Plug 'airblade/vim-gitgutter'
 call plug#end()

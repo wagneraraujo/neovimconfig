@@ -8,7 +8,12 @@ source ./config/theme.vim
 source ./config/basic.vim
 
 
-  " " IndentLine
+" == new configs plugins ==
+let g:cursorhold_updatetime = 100
+let g:rust_clip_command = 'xclip -selection clipboard'
+
+
+" " IndentLine
   let g:indentLine_enabled = 1
   let g:indentLine_concealcursor = 0
   let g:indentLine_char = '|'
