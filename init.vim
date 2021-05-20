@@ -1,227 +1,14 @@
+" === plugins ===
+source plugins.vim
 
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.vim/plugged')
-Plug 'frazrepo/vim-rainbow'
-Plug 'leafOfTree/vim-vue-plugin'
-Plug 'junegunn/vim-easy-align'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-commentary'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'itchyny/vim-gitbranch'
-Plug 'airblade/vim-gitgutter'
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'Yggdroot/indentLine'
-Plug 'rakr/vim-one'
-if isdirectory('/usr/local/opt/fzf')
-  Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-else
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-  Plug 'junegunn/fzf.vim'
-endif
-let g:make = 'gmake'
-if exists('make')
-        let g:make = 'make'
-endif
-Plug 'tpope/vim-haml'
-Plug 'mattn/emmet-vim'
-Plug 'jelera/vim-javascript-syntax'
-Plug 'leafgarland/typescript-vim'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'plasticboy/vim-markdown'
-" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-Plug 'pseewald/vim-anyfold'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'Valloric/MatchTagAlways'
-Plug 'wakatime/vim-wakatime'
-Plug 'jparise/vim-graphql'
-Plug 'AndrewRadev/tagalong.vim'
-Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'mxw/vim-jsx'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'neoclide/vim-jsx-improve'
-Plug 'tpope/vim-surround'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-css','coc-json','coc-fzf-preview','coc-styled-components', 'coc-vetur', 'coc-emmet', 'coc-eslint' ]
-Plug 'LinArcX/mpbtl'
-Plug 'jiangmiao/auto-pairs'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'branch': 'release/1.x',
-  \ 'for': ['javascript', 'php', 'typescript', 'css','sass', 'styled-components','less', 'scss', 'json', 'vue', 'yaml', 'html'] }
-Plug 'joshdick/onedark.vim'
-" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'mhinz/vim-mix-format'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'branch': 'release/1.x',
-  \ 'for': [
-      \ 'javascript',
-      \ 'typescript',
-      \ 'css',
-      \ 'less',
-      \ 'scss',
-      \ 'json',
-      \ 'graphql',
-      \ 'markdown',
-      \ 'vue',
-      \ 'yaml',
-      \ 'html'] }
-Plug 'w0rp/ale'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-eunuch'
-" Plug 'NLKNguyen/papercolor-theme'
-" Plug 'morhetz/gruvbox'
-Plug 'pantharshit00/vim-prisma'
-Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
-" Plug 'nikvdp/ejs-syntax'
+" === theme ===
+source ./config/theme.vim
+
+" === basic config ===
+source ./config/basic.vim
 
 
-" themes neovim
-" srcery-colors/srcery-vim
-Plug 'yonlu/omni.vim' "omni
-Plug 'sainnhe/edge'
-Plug 'Th3Whit3Wolf/one-nvim'
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'srcery-colors/srcery-vim'
-" Plug 'dracula/vim', { 'as': 'dracula' }
-" Plug 'sainnhe/sonokai'
-" Plug 'embark-theme/vim', { 'as': 'embark' }
-" Plug 'mhartington/oceanic-next'
-
-
-call plug#end()
-
-set t_Co=256
-set termguicolors     " enable true colors support
-let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme srcery
-"gruvbox PaperColor challenger_deep edge github_light nightfly OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
-let g:airline_theme ='srcery'  " jellybeans  'bubblegum'   'powerlineish'
-set background=dark
-let g:one_allow_italics = 1 " I love italic for comments
-let g:srcery_italic = 1
-let g:srcery_italic = 1
-
-
-"set notermguicolors
-" set guifont=monoid\ Regular\ Font\ 11
-"set guifont=Hasklig
-"set guifont=Hasklig:h26
-
-"*****************************************************************************
-"" Basic Setup
-"title*****************************************************************************"
-
-set shada="NONE"
-set re=1
-
-"" Encoding
-set encoding=utf-8
-set fileencoding=utf-8
-set fileencodings=utf-8
-set wildmenu
-"" Fix backspace indent
-set backspace=indent,eol,start
-set autoindent
-set lazyredraw
-"" Tabs. May be overridden by autocmd rules
-set tabstop=2
-set softtabstop=0
-set shiftwidth=2
-set expandtab
-"set relativenumber
-set confirm
-set exrc                                                  " exec command in init.vim
-set secure                                                " safely do command above
-"set autochdir           
-filetype plugin indent on
-set noexpandtab                                           " use only '\t' as tab
-set scrolloff=4             
-set visualbell                          
-"""theme""""
-set t_Co=256
-set termguicolors     " enable true colors support
-let base16colorspace=256  " Access colors present in 256 colorspace
-"colorscheme embark "night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
-"set notermguicolors
-"set guifont=Hasklig
-"set guifont=Hasklig:h26
-
-"*****************************************************************************
-"" Basic Setup
-"*****************************************************************************"
-"" Encoding
-set encoding=utf-8
-set fileencoding=utf-8
-set fileencodings=utf-8
-set ttyfast
-set wildmenu
-"" Fix backspace indent
-set backspace=indent,eol,start
-set autoindent
-set lazyredraw
-"" Tabs. May be overridden by autocmd rules
-set tabstop=2
-set softtabstop=0
-set shiftwidth=2
-set expandtab
-"set relativenumber
-set confirm
-"" Map leader to ,
-let mapleader=','
-
-"" Enable hidden buffers
-set hidden
-
-"" Searching
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-
-set fileformats=unix,dos,mac
-
-if exists('$SHELL')
-    set shell=$SHELL
-else
-    set shell=/bin/sh
-endif
-
-" session management
-" let g:session_directory = "~/.vim/session"
-" let g:session_autoload = "no"
-" let g:session_autosave = "no"
-" let g:session_command_aliases = 1
-
-"*****************************************************************************
-"" Visual Settings
-"*****************************************************************************
-syntax on
-set ruler
-set number
-
-let no_buffers_menu=1
-"silent! colorscheme molokai
-
-set mousemodel=popup
-set t_Co=256
-set guioptions=egmrti
-set gfn=Monospace\ 10
-
-if has("gui_running")
-  if has("gui_mac") || has("gui_macvim")
-    set transparency=7
-  endif
-else
-  let g:CSApprox_loaded = 1
-
-  " IndentLine
+  " " IndentLine
   let g:indentLine_enabled = 1
   let g:indentLine_concealcursor = 0
   let g:indentLine_char = '|'
@@ -230,39 +17,9 @@ else
 let g:indentLine_conceallevel = 2
 
   
-  if $COLORTERM == 'gnome-terminal'
-    set term=gnome-256color
-  else
-    if $TERM == 'xterm'
-      set term=xterm-256color
-    endif
-  endif
-  
-endif
 
-
-if &term =~ '256color'
-  set t_ut=
-endif
 
 " Display options
-set showmode
-set showcmd
-"" Disable the blinking cursor.
-set gcr=a:blinkon0
-set scrolloff=3
-
-"" Status bar
-set laststatus=2
-
-"" Use modeline overrides
-set modeline
-set modelines=10
-
-set title
-set titleold="Terminal"
-set titlestring=%F
-
 "set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 
 " Search mappings: These will make it so that going to the next one in a
@@ -332,19 +89,6 @@ nnoremap <silent> <leader>sh :terminal<CR>
 "*****************************************************************************
 "" Commands
 "*****************************************************************************
-" remove trailing whitespaces
-command! FixWhitespace :%s/\s\+$//e
-
-"*****************************************************************************
-"" Functions
-"*****************************************************************************
-if !exists('*s:setupWrapping')
-  function s:setupWrapping()
-    set wrap
-    set wm=2
-    set textwidth=79
-  endfunction
-endif
 
 "*****************************************************************************
 "" Autocmd Rules
@@ -462,10 +206,6 @@ nmap <silent> <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
 " Disable visualbell
-set noerrorbells visualbell t_vb=
-if has('autocmd')
-  autocmd GUIEnter * set visualbell t_vb=
-endif
 
 "" Copy/Paste/Cut
 if has('unnamedplus')
@@ -901,7 +641,7 @@ let g:fzf_action = {
 
 
 "new config relationed coc
-set updatetime=500
+set updatetime=200
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
