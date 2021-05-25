@@ -1,11 +1,14 @@
-" === plugins ===
-source plugins.vim
+syntax on
+
+
+"=== plugins ===
+source ~/neovimconfig/plugins.vim
 
 " === theme ===
-source ./config/theme.vim
+source ~/neovimconfig/config/theme.vim
 
 " === basic config ===
-source ./config/basic.vim
+source ~/neovimconfig/config/basic.vim
 
 
 " == new configs plugins ==
@@ -1071,5 +1074,4 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-au BufNewFile,BufRead *.ejs set filetype=html
 

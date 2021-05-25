@@ -1,8 +1,9 @@
+syntax on
 set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme srcery
+colorscheme onedark
 "gruvbox PaperColor challenger_deep edge github_light nightfly OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
-let g:airline_theme ='srcery'  " jellybeans  'bubblegum'   'powerlineish'
+let g:airline_theme ='dracula'  " jellybeans  'bubblegum'   'powerlineish'
 set background=dark
 let g:one_allow_italics = 1 " I love italic for comments
 let g:srcery_italic = 1

@@ -17,3 +17,4 @@ endfunction
 if !exists('g:loaded_ale')
     packadd ale
 endif
+

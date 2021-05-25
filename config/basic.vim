@@ -1,3 +1,4 @@
+syntax on
 set shada="NONE"
 set re=1
 set encoding=utf-8
@@ -39,16 +40,13 @@ syntax on
 set ruler
 set number
 let no_buffers_menu=1
-
 set mousemodel=popup
 set guioptions=egmrti
 let g:CSApprox_loaded = 1
 set showmode
 set showcmd
-"" Disable the blinking cursor.
 set gcr=a:blinkon0
 set scrolloff=3
-"" Status bar
 set laststatus=2
 set modeline
 set modelines=10

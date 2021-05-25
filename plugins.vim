@@ -1,3 +1,4 @@
+syntax on
 call plug#begin('~/.vim/plugged')
 Plug 'frazrepo/vim-rainbow'
 Plug 'leafOfTree/vim-vue-plugin'
@@ -42,7 +43,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-css','coc-json','coc-fzf-preview','coc-styled-components', 'coc-vetur', 'coc-emmet', 'coc-eslint' ]
+let g:coc_global_extensions = ['coc-css','coc-json','coc-fzf-preview','coc-styled-components', 'coc-vetur', 'coc-emmet', 'coc-eslint','coc-html' ]
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', {
@@ -83,11 +84,14 @@ Plug 'Th3Whit3Wolf/one-nvim'
 " Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'srcery-colors/srcery-vim'
-" Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'sainnhe/sonokai'
 " Plug 'embark-theme/vim', { 'as': 'embark' }
 " Plug 'mhartington/oceanic-next'
 Plug 'antoinemadec/FixCursorHold.nvim'
-Plug 'rust-lang/rust.vim'
+" Plug 'rust-lang/rust.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'jaredgorski/spacecamp'
+Plug 'AndrewRadev/splitjoin.vim' " gS gJ
+
 call plug#end()
