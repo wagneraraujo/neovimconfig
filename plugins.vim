@@ -96,4 +96,5 @@ Plug 'AndrewRadev/splitjoin.vim' " gS gJ
 
 Plug 'godlygeek/tabular'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'rakr/vim-colors-rakr'
 call plug#end()

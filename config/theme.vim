@@ -1,6 +1,6 @@
 " colorscheme spacecamp_lite 
-colorscheme PaperColor
-" colorscheme spacecamp_lite
+" colorscheme onehalflight
+colorscheme one
 set background=light
 syntax on
 set termguicolors     " enable true colors support
