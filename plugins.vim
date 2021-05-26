@@ -71,7 +71,7 @@ Plug 'prettier/vim-prettier', {
 Plug 'w0rp/ale'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-eunuch'
-" Plug 'NLKNguyen/papercolor-theme'
+Plug 'NLKNguyen/papercolor-theme'
 " Plug 'morhetz/gruvbox'
 Plug 'pantharshit00/vim-prisma'
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
@@ -79,12 +79,12 @@ Plug 'nikvdp/ejs-syntax'
 " themes neovim
 " srcery-colors/srcery-vim
 " Plug 'yonlu/omni.vim' "omni
-Plug 'sainnhe/edge'
+" Plug 'sainnhe/edge'
 Plug 'Th3Whit3Wolf/one-nvim'
 " Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-Plug 'bluz71/vim-nightfly-guicolors'
+" Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'srcery-colors/srcery-vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'sainnhe/sonokai'
 " Plug 'embark-theme/vim', { 'as': 'embark' }
 " Plug 'mhartington/oceanic-next'
@@ -94,4 +94,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jaredgorski/spacecamp'
 Plug 'AndrewRadev/splitjoin.vim' " gS gJ
 
+Plug 'godlygeek/tabular'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
