@@ -1,7 +1,8 @@
 " colorscheme spacecamp_lite 
+"
 " colorscheme onehalflight
 colorscheme one
-set background=light
+set background=dark
 syntax on
 set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
@@ -45,3 +46,10 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Clean'     :'✔︎',
                 \ 'Unknown'   :'?',
                 \ }
+
+
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+
+let g:mta_use_matchparen_group = 1
+highlight MatchTag ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
+

@@ -1,7 +1,7 @@
 syntax on
 call plug#begin('~/.vim/plugged')
-Plug 'frazrepo/vim-rainbow'
 Plug 'leafOfTree/vim-vue-plugin'
+Plug 'luochen1990/rainbow'
 Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -14,12 +14,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'Yggdroot/indentLine'
 Plug 'rakr/vim-one'
-if isdirectory('/usr/local/opt/fzf')
-  Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-else
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-  Plug 'junegunn/fzf.vim'
-endif
+" if isdirectory('/usr/local/opt/fzf')
+"   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+" else
+"   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+"   Plug 'junegunn/fzf.vim'
+" endif
 let g:make = 'gmake'
 if exists('make')
         let g:make = 'make'
@@ -97,4 +97,8 @@ Plug 'AndrewRadev/splitjoin.vim' " gS gJ
 Plug 'godlygeek/tabular'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'rakr/vim-colors-rakr'
+Plug 'mhinz/vim-startify'
+Plug 'ctrlpvim/ctrlp.vim'
+
+
 call plug#end()

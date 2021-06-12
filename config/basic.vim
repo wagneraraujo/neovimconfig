@@ -1,4 +1,4 @@
-let g:coc_global_config="$HOME/neovimconfig/ coc-settings.json"
+let g:coc_global_config="$HOME/neovimconfig/coc-settings.json"
 syntax on
 set shada="NONE"
 set re=1

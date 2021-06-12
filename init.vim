@@ -1074,4 +1074,5 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-
+autocmd BufNewFile,BufRead *.ejs set filetype=html
+autocmd BufNewFile,BufRead *._ejs set filetype=html
