@@ -486,7 +486,7 @@ let g:prettier#autoformat =0
 let g:prettier#autoformat_config_present = 1
 let g:prettier#quickfix_enabled =1
 "autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.php,*.ejs,*.css,*.less,*.scss,*.json,*.vue PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.sass,*.tsx,*.php,*.ejs,*.css,*.less,*.scss,*.json,*.vue PrettierAsync
 
 
 " use a different style
@@ -1076,3 +1076,11 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 autocmd BufNewFile,BufRead *.ejs set filetype=html
 autocmd BufNewFile,BufRead *._ejs set filetype=html
+
+
+" resize current buffer by +/- 5 
+
+nnoremap <silent> <Leader>= :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+nnoremap <silent> <Leader>0 :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
+nnoremap <silent> <Leader>9 :exe "vertical resize " . (winwidth(0) * 2/3)<CR>

@@ -49,7 +49,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'branch': 'release/1.x',
-  \ 'for': ['javascript', 'php', 'typescript', 'css','sass', 'styled-components','less', 'scss', 'json', 'vue', 'yaml', 'html'] }
+  \ 'for': ['javascript','php','typescript','css','sass','styled-components','less','scss','json','vue','yaml','html'] }
 Plug 'joshdick/onedark.vim'
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'mhinz/vim-mix-format'
@@ -99,6 +99,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'rakr/vim-colors-rakr'
 Plug 'mhinz/vim-startify'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'camspiers/lens.vim'
 
 
 call plug#end()
