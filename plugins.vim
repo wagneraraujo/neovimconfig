@@ -43,7 +43,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-css','coc-json','coc-fzf-preview','coc-styled-components', 'coc-vetur', 'coc-emmet', 'coc-eslint','coc-html' ]
+let g:coc_global_extensions = ['coc-css','coc-tslint-plugin','coc-tsserver','coc-json','coc-fzf-preview','coc-styled-components', 'coc-vetur', 'coc-emmet', 'coc-eslint','coc-html' ]
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', {
@@ -92,14 +92,14 @@ Plug 'antoinemadec/FixCursorHold.nvim'
 " Plug 'rust-lang/rust.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'jaredgorski/spacecamp'
-Plug 'AndrewRadev/splitjoin.vim' " gS gJ
+" Plug 'AndrewRadev/splitjoin.vim' " gS gJ
 
 Plug 'godlygeek/tabular'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'rakr/vim-colors-rakr'
-Plug 'mhinz/vim-startify'
+" Plug 'rakr/vim-colors-rakr'
+" Plug 'mhinz/vim-startify'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'camspiers/lens.vim'
+" Plug 'camspiers/lens.vim'
 
 
 call plug#end()
