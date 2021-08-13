@@ -1,14 +1,16 @@
 " colorscheme spacecamp_lite 
 "
 " colorscheme onehalflight
-colorscheme one
+" colorscheme spacecamp
+colorscheme tokyonight
+
 set background=dark
 syntax on
 set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
 "gruvbox PaperColor challenger_deep edge github_light nightfly OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
 "spacecamp_lite =dark
-let g:airline_theme ='murmur'  " jellybeans murmur 'bubblegum'   'powerlineish'
+let g:airline_theme ='tokyonight'  " jellybeans murmur 'bubblegum'   'powerlineish  night-owl'
 let g:one_allow_italics = 1 " I love italic for comments
 let g:srcery_italic = 1
 let g:srcery_italic = 1
@@ -52,4 +54,7 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 
 let g:mta_use_matchparen_group = 1
 highlight MatchTag ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
+
+
+let g:tokyonight_style = 'night' " available: night, storm
 

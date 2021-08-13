@@ -99,4 +99,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'Galooshi/import-js'
 
+Plug 'jaredgorski/spacecamp'
+Plug 'ghifarit53/tokyonight-vim'
+Plug 'haishanh/night-owl.vim'
+
 call plug#end()
