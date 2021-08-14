@@ -2,7 +2,8 @@
 "
 " colorscheme onehalflight
 " colorscheme spacecamp
-colorscheme tokyonight
+" colorscheme tokyonight
+colorscheme night-owl
 
 set background=dark
 syntax on
