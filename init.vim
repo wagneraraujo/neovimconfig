@@ -1089,3 +1089,7 @@ nnoremap <silent> <Leader>9 :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
 let g:syntastic_auto_jump = 1
 
 noautocmd
+
+
+map q <Nop>
+
