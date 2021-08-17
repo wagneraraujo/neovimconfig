@@ -43,7 +43,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 " Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-css','coc-tslint-plugin','coc-tsserver','coc-json','coc-fzf-preview','coc-vetur',  'coc-eslint','coc-html','coc-actions','coc-lists','coc-vimlsp' ]
+let g:coc_global_extensions = ['coc-css', 'coc-styled-components', 'coc-tslint-plugin','coc-tsserver','coc-json','coc-fzf-preview','coc-vetur',  'coc-eslint','coc-html','coc-actions','coc-lists','coc-vimlsp', 'coc-highlight' ]
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
 Plug 'joshdick/onedark.vim'
@@ -64,8 +64,8 @@ Plug 'prettier/vim-prettier', {
       \ 'vue',
       \ 'yaml',
       \ 'html'] }
-" Plug 'w0rp/ale'
-" Plug 'tpope/vim-dispatch'
+ Plug 'w0rp/ale'
+ Plug 'tpope/vim-dispatch'
 " Plug 'tpope/vim-eunuch'
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'morhetz/gruvbox'
@@ -102,5 +102,11 @@ Plug 'Galooshi/import-js'
 Plug 'jaredgorski/spacecamp'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'haishanh/night-owl.vim'
+
+
+Plug 'tpope/vim-sleuth' " shiftwidth expandtab softtabstop smarttab
+Plug 'tyru/caw.vim'
+Plug 'jparise/vim-graphql'
+Plug 'peitalin/vim-jsx-typescript'
 
 call plug#end()
