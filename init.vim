@@ -9,6 +9,7 @@ source ~/neovimconfig/config/theme.vim
 
 " === basic config ===
 source ~/neovimconfig/config/basic.vim
+" source ~/neovimconfig/lua/lsp-config.lua
 
 
 " == new configs plugins ==
@@ -693,14 +694,25 @@ if exists('*complete_info')
 else
   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
+"renomar coc 
+nmap <leader>rn <Plug>(coc-rename)
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 
 "prettier 
 let g:prettier#config#config_precedence = 'file-override'
 let g:prettier#config#parser = ''
 " set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
-set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
-set listchars+=tab:→→\|,space:.,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+" set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
+" set listchars+=tab:→→\|,space:.,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 
 " FZF and Rg settings for search
 set wildmode=list:longest,list:full
@@ -1165,7 +1177,7 @@ let g:WebDevIconsDefaultFolderSymbolColor = s:beige
 let g:WebDevIconsDefaultFileSymbolColor = s:blue 
 
 " NERDTree Git Plugin
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicat = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
@@ -1204,3 +1216,7 @@ if executable('ag')
   " " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
+
+"config lsp for neovim with lua
+

@@ -43,7 +43,8 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 " Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-css', 'coc-styled-components', 'coc-tslint-plugin','coc-tsserver','coc-json','coc-fzf-preview','coc-vetur',  'coc-eslint','coc-html','coc-actions','coc-lists','coc-vimlsp', 'coc-highlight' ]
+let g:coc_global_extensions = ['coc-css', 'coc-styled-components', 'coc-json','coc-fzf-preview','coc-vetur',  'coc-eslint','coc-html','coc-actions','coc-lists', 'coc-highlight','coc-tsserver','coc-vimlsp' ]
+
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
 Plug 'joshdick/onedark.vim'
@@ -110,5 +111,10 @@ Plug 'jparise/vim-graphql'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'vim-syntastic/syntastic'
-
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
+
+
+
+"lsp typescriot
+"npm install -g typescript typescript-language-server diagnostic-languageserver eslint_d
