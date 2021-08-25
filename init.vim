@@ -47,6 +47,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
 
+
 "*****************************************************************************
 "" Abbreviations
 "*****************************************************************************
@@ -359,7 +360,7 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#formatter = 'jsformatter'
 
 
 " Use CTRL-S for saving, also in Insert mode
@@ -1219,4 +1220,8 @@ endif
 
 
 "config lsp for neovim with lua
+
+"tag
+let g:vim_matchtag_enable_by_default = 0
+let g:vim_matchtag_files = '*.html,*.xml,*.js,*.jsx,*.vue,*.svelte,*.jsp'
 

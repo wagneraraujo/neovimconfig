@@ -33,14 +33,14 @@ Plug 'plasticboy/vim-markdown'
 " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'pseewald/vim-anyfold'
 Plug 'cakebaker/scss-syntax.vim'
-Plug 'Valloric/MatchTagAlways'
+" Plug 'Valloric/MatchTagAlways'
 Plug 'wakatime/vim-wakatime'
 Plug 'jparise/vim-graphql'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'mxw/vim-jsx'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-" Plug 'neoclide/vim-jsx-improve'
+Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = ['coc-css', 'coc-styled-components', 'coc-json','coc-fzf-preview','coc-vetur',  'coc-eslint','coc-html','coc-actions','coc-lists', 'coc-highlight','coc-tsserver','coc-vimlsp' ]
@@ -48,7 +48,7 @@ let g:coc_global_extensions = ['coc-css', 'coc-styled-components', 'coc-json','c
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
 Plug 'joshdick/onedark.vim'
-" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Plug 'mhinz/vim-mix-format'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
@@ -112,6 +112,7 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'neovim/nvim-lspconfig'
+Plug 'leafOfTree/vim-matchtag'
 call plug#end()
 
 

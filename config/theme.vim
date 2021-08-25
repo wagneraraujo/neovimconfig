@@ -2,8 +2,8 @@
 "
 " colorscheme onehalflight
 " colorscheme spacecamp
-colorscheme tokyonight
-" colorscheme night-owl
+" colorscheme tokyonight
+colorscheme night-owl
 
 set background=dark
 syntax on
@@ -57,5 +57,5 @@ let g:mta_use_matchparen_group = 1
 highlight MatchTag ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
 
 
-let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_style = 'storm' " available: night, storm
 
