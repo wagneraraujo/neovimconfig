@@ -1,11 +1,10 @@
 {
 	"tsserver.log": "verbose",
 	"tsserver.trace.server": "verbose",
-
+	"tsserver.disableAutomaticTypeAcquisition": false,
 	"coc.preferences.enableFloatHighlight": true,
-
 	"coc.preferences.snippetStatusText": "Ⓢ ",
-	"coc.preferences.extensionUpdateCheck": "daily",
+	"coc.preferences.extensionUpdateCheck": "week",
 	"coc.preferences.messageLevel": "error",
 	"coc.source.around.firstMatch": false,
 	"coc.source.buffer.firstMatch": false,
@@ -15,7 +14,7 @@
 	"suggest.enablePreselect": false,
 	"suggest.triggerAfterInsertEnter": true,
 	"suggest.autoTrigger": "always",
-	"suggest.timeout": 5000,
+	"suggest.timeout": 3000,
 	"suggest.enablePreview": true,
 	"suggest.floatEnable": true,
 	"suggest.detailField": "preview",
@@ -62,15 +61,7 @@
 	"list.previewHighlightGroup": "Statement",
 	"list.nextKeymap": "<C-e>",
 	"list.previousKeymap": "<C-u>",
-	"coc.preferences.formatOnSaveFiletypes": [
-		"javascript",
-		"typescript",
-		"html",
-		"css",
-		"json",
-		"vue",
-		"ejs"
-	],
+	"coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "html", "css"],
 	"yaml.format.enable": true,
 	"signature.target": "float",
 	"yank.enableCompletion": false,
@@ -104,24 +95,11 @@
 	"prettier.useTabs": true,
 	"prettier.trailingComma": "all",
 	"prettier.singleQuote": false,
-	"diagnostic-languageserver.filetypes": {
-		"vim": "vint",
-		"email": "languagetool",
-		"markdown": ["write-good", "markdownlint"],
-		"sh": "shellcheck",
-		"php": ["phpstan", "psalm"]
-	},
 	"languageserver": {
 		"rust": {
 			"command": "rust-analyzer",
 			"filetypes": ["rust"],
 			"rootPatterns": ["Cargo.toml"]
-		},
-		"bash": {
-			"command": "bash-language-server",
-			"args": ["start"],
-			"filetypes": ["sh"],
-			"ignoredRootPaths": []
 		}
 	}
 }
