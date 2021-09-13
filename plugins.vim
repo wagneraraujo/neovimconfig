@@ -42,28 +42,28 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-css', 'coc-styled-components', 'coc-json','coc-fzf-preview','coc-vetur',  'coc-eslint', 'coc-highlight','coc-tsserver','coc-vimlsp' ]
+let g:coc_global_extensions = ['coc-css', 'coc-styled-components', 'coc-json','coc-fzf-preview','coc-vetur',  'coc-eslint', 'coc-highlight','coc-tsserver','coc-vimlsp','coc-prettier' ]
 
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
 " Plug 'joshdick/onedark.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Plug 'mhinz/vim-mix-format'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'branch': 'release/1.x',
-  \ 'for': [
-      \ 'javascript',
-      \ 'typescript',
-      \ 'css',
-      \ 'less',
-      \ 'scss',
-      \ 'json',
-      \ 'graphql',
-      \ 'markdown',
-      \ 'vue',
-      \ 'yaml',
-      \ 'html'] }
+" Plug 'prettier/vim-prettier', {
+"  \ 'do': 'yarn install',
+"  \ 'branch': 'release/1.x',
+"  \ 'for': [
+"      \ 'javascript',
+"      \ 'typescript',
+"      \ 'css',
+"      \ 'less',
+"      \ 'scss',
+"      \ 'json',
+"      \ 'graphql',
+"      \ 'markdown',
+"      \ 'vue',
+"      \ 'yaml',
+"      \ 'html'] }
  Plug 'w0rp/ale'
  Plug 'tpope/vim-dispatch'
 " Plug 'pantharshit00/vim-prisma'
@@ -107,6 +107,8 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'leafOfTree/vim-matchtag'
 Plug 'preservim/tagbar'
 Plug 'preservim/nerdcommenter'
+Plug 'sbdchd/neoformat'
+
 call plug#end()
 
 

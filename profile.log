@@ -1,0 +1,6 @@
+:profile start profile.log
+:profile func *
+:profile file *
+" Do the 'slow' stuff in Vim
+:profile pause
+:noautocmd qall!
