@@ -490,7 +490,7 @@ let g:prettier#autoformat =0
 let g:prettier#autoformat_config_present = 1
 let g:prettier#quickfix_enabled =1
 "autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.sass,*.tsx,*.php,*.ejs,*.css,*.less,*.scss,*.json,*.vue PrettierAsync
+" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.sass,*.tsx,*.php,*.ejs,*.css,*.less,*.json,*.vue PrettierAsync
 
 
 " use a different style
