@@ -2,7 +2,9 @@
 "
 " colorscheme onehalflight
 " colorscheme spacecamp
-colorscheme tokyonight
+" colorscheme tokyonight
+" colorscheme github_*
+colorscheme github_dark
 " colorscheme night-owl
 
 set background=dark
@@ -58,4 +60,21 @@ highlight MatchTag ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
 
 
 let g:tokyonight_style = 'storm' " available: night, storm
+
+
+
+" Example config in VimScript
+let g:github_function_style = "italic"
+let g:github_sidebars = ["qf", "vista_kind", "terminal", "packer"]
+
+" Change the "hint" color to the "orange" color, and make the "error" color bright red
+" let g:github_colors = [hint = "orange", error = "#ff0000"]
+
+" Load the colorscheme
+" colorscheme github_dark
+" colorscheme github_light
+" colorscheme github_light_default
+" colorscheme github_dimmed
+" colorscheme github_dark_default
+" colorscheme github_dark
 

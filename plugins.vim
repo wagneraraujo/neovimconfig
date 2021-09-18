@@ -108,7 +108,14 @@ Plug 'leafOfTree/vim-matchtag'
 Plug 'preservim/tagbar'
 Plug 'preservim/nerdcommenter'
 Plug 'sbdchd/neoformat'
+Plug 'SirVer/ultisnips'
+Plug 'mlaursen/vim-react-snippets'
+Plug 'alvan/vim-closetag'
+Plug 'projekt0n/github-nvim-theme'
+" Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
 
+Plug 'akinsho/bufferline.nvim'
 call plug#end()
 
 

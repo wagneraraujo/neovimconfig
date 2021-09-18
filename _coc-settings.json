@@ -2,6 +2,25 @@
   "tsserver.log": "verbose",
   "tsserver.trace.server": "verbose",
   "tsserver.disableAutomaticTypeAcquisition": false,
+  "coc.preferences.enableFloatHighlight": true,
+  "coc.preferences.snippetStatusText": "Ⓢ ",
+  "coc.preferences.extensionUpdateCheck": "week",
+  "coc.preferences.messageLevel": "error",
+  "coc.source.around.firstMatch": false,
+  "coc.source.buffer.firstMatch": false,
+  "coc.source.syntax.firstMatch": false,
+  "suggest.detailMaxLength": 60,
+  "suggest.noselect": true,
+  "suggest.enablePreselect": false,
+  "suggest.triggerAfterInsertEnter": true,
+  "suggest.autoTrigger": "always",
+  "suggest.timeout": 3000,
+  "suggest.enablePreview": true,
+  "suggest.floatEnable": true,
+  "suggest.detailField": "preview",
+  "suggest.snippetIndicator": "",
+  "suggest.triggerCompletionWait": 300,
+  "suggest.echodocSupport": true,
   "suggest.completionItemKindLabels": {
     "class": "\uf0e8",
     "color": "\ue22b",
@@ -48,6 +67,11 @@
     "html",
     "css"
   ],
+  "yaml.format.enable": true,
+  "signature.target": "float",
+  "yank.enableCompletion": false,
+  "explorer.width": 38,
+  "explorer.quitOnOpen": true,
   "explorer.sources": [
     {
       "name": "buffer",
@@ -58,11 +82,24 @@
       "expand": true
     }
   ],
+  "explorer.file.column.indent.indentLine": true,
+  "explorer.file.showHiddenFiles": true,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.buffer.showHiddenBuffers": false,
   "explorer.keyMappings.global": {
     "pl": "preview:labeling",
     "pc": "preview:content",
     "pp": "pasteFile"
   },
+  "html.format.enable": true,
+  "json.format.enable": true,
+  "prettier.printWidth": 100,
+  "prettier.eslintIntegration": true,
+  "prettier.disableLanguages": [],
+  "prettier.formatterPriority": 1,
+  "prettier.useTabs": true,
+  "prettier.trailingComma": "all",
+  "prettier.singleQuote": false,
   "languageserver": {
     "rust": {
       "command": "rust-analyzer",
