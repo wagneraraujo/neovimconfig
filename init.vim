@@ -210,8 +210,13 @@ let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \}
 let b:ale_fixers = ['prettier', 'eslint']
-let g:ale_linter_aliases = {'vue': ['vue', 'javascript']}
+let g:ale_linter_aliases = {'vue': ['vue', 'javascript','typescript']}
 let g:ale_linters = {'vue': ['eslint', 'vls']}
+let g:ale_disable_lsp = 1
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:airline#extensions#ale#enabled = 1
 
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
@@ -559,7 +564,7 @@ let g:jsx_pragma_required = 1
 
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
-let g:tagalong_filetypes = ['html','js','javascript','jsx','jsx','ts','php','vue']
+let g:tagalong_filetypes = ['html','js','javascript','jsx','tsx','ts','php','vue', 'javascriptreact', 'typescriptreact']
 
 
 set cursorline
@@ -793,10 +798,6 @@ highlight Normal gui=none
 highlight NonText guibg=none
 
 " fzf-vim
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit' }
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],

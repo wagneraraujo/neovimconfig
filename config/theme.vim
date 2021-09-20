@@ -4,8 +4,14 @@
 " colorscheme spacecamp
 " colorscheme tokyonight
 " colorscheme github_*
-colorscheme github_dark
+" colorscheme github_dark
 " colorscheme night-owl
+
+" colorscheme github_light
+" colorscheme github_light_default
+" colorscheme github_dimmed
+" colorscheme github_dark_default
+colorscheme github_dark
 
 set background=dark
 syntax on
@@ -13,7 +19,8 @@ set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
 "gruvbox PaperColor challenger_deep edge github_light nightfly OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
 "spacecamp_lite =dark
-let g:airline_theme ='murmur'  " jellybeans murmur 'bubblegum'   'powerlineish  night-owl'
+let g:airline_theme ='badwolf'  
+"angr badwolf jellybeans murmur 'bubblegum'   'powerlineish  night-owl'
 let g:one_allow_italics = 1 " I love italic for comments
 let g:srcery_italic = 1
 let g:srcery_italic = 1

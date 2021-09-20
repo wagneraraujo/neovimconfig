@@ -1,8 +1,8 @@
 syntax on
 call plug#begin('~/.vim/plugged')
-Plug 'leafOfTree/vim-vue-plugin'
+" Plug 'leafOfTree/vim-vue-plugin'
 Plug 'luochen1990/rainbow'
-Plug 'junegunn/vim-easy-align'
+" Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-fugitive'
@@ -12,7 +12,7 @@ Plug 'itchyny/vim-gitbranch'
 Plug 'airblade/vim-gitgutter'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'Yggdroot/indentLine'
-Plug 'rakr/vim-one'
+" Plug 'rakr/vim-one'
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 else
@@ -30,7 +30,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'plasticboy/vim-markdown'
 " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-Plug 'pseewald/vim-anyfold'
+" Plug 'pseewald/vim-anyfold'
 Plug 'cakebaker/scss-syntax.vim'
 " Plug 'Valloric/MatchTagAlways'
 Plug 'wakatime/vim-wakatime'
@@ -42,7 +42,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-css', 'coc-styled-components', 'coc-json','coc-fzf-preview','coc-vetur',  'coc-eslint', 'coc-highlight','coc-tsserver','coc-vimlsp','coc-prettier' ]
+let g:coc_global_extensions = ['coc-css','coc-styled-components','coc-json','coc-fzf-preview','coc-eslint', 'coc-highlight','coc-tsserver','coc-vimlsp','coc-prettier' ]
 
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
@@ -65,7 +65,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 "      \ 'yaml',
 "      \ 'html'] }
  Plug 'w0rp/ale'
- Plug 'tpope/vim-dispatch'
+ " Plug 'tpope/vim-dispatch'
 " Plug 'pantharshit00/vim-prisma'
 " Plug 'yonlu/omni.vim' "omni
 " Plug 'sainnhe/edge'
@@ -93,19 +93,19 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Galooshi/import-js'
 
 " Plug 'jaredgorski/spacecamp'
-Plug 'ghifarit53/tokyonight-vim'
-Plug 'haishanh/night-owl.vim'
+" Plug 'ghifarit53/tokyonight-vim'
+" Plug 'haishanh/night-owl.vim'
 
 
 Plug 'tpope/vim-sleuth' " shiftwidth expandtab softtabstop smarttab
-Plug 'tyru/caw.vim'
+" Plug 'tyru/caw.vim'
 Plug 'jparise/vim-graphql'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'neovim/nvim-lspconfig'
 Plug 'leafOfTree/vim-matchtag'
-Plug 'preservim/tagbar'
+" Plug 'preservim/tagbar'
 Plug 'preservim/nerdcommenter'
 Plug 'sbdchd/neoformat'
 Plug 'SirVer/ultisnips'
