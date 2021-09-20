@@ -48,7 +48,7 @@ Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
 " Plug 'joshdick/onedark.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-" Plug 'mhinz/vim-mix-format'
+Plug 'mhinz/vim-mix-format'
 " Plug 'prettier/vim-prettier', {
 "  \ 'do': 'yarn install',
 "  \ 'branch': 'release/1.x',
@@ -65,7 +65,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 "      \ 'yaml',
 "      \ 'html'] }
  Plug 'w0rp/ale'
- " Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-dispatch'
 " Plug 'pantharshit00/vim-prisma'
 " Plug 'yonlu/omni.vim' "omni
 " Plug 'sainnhe/edge'
@@ -88,7 +88,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'rakr/vim-colors-rakr'
 " Plug 'mhinz/vim-startify'
 " Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'camspiers/lens.vim'
+Plug 'camspiers/lens.vim'
 
 Plug 'Galooshi/import-js'
 
@@ -98,7 +98,7 @@ Plug 'Galooshi/import-js'
 
 
 Plug 'tpope/vim-sleuth' " shiftwidth expandtab softtabstop smarttab
-" Plug 'tyru/caw.vim'
+Plug 'tyru/caw.vim'
 Plug 'jparise/vim-graphql'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'AndrewRadev/tagalong.vim'

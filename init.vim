@@ -18,14 +18,14 @@ let g:rust_clip_command = 'xclip -selection clipboard'
 
 
 " " IndentLine
-  let g:indentLine_enabled = 1
-  let g:indentLine_concealcursor = 0
-  let g:indentLine_char = '|'
-  let g:indentLine_faster = 1
-  let g:indentLine_concealcursor = 'inc'
+let g:indentLine_enabled = 1
+let g:indentLine_concealcursor = 0
+let g:indentLine_char = '|'
+let g:indentLine_faster = 1
+let g:indentLine_concealcursor = 'inc'
 let g:indentLine_conceallevel = 2
 
-  
+
 
 
 " Display options
@@ -206,9 +206,9 @@ let g:UltiSnipsEditSplit="vertical"
 " ale
 let g:ale_linters = {}
 let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['eslint'],
-\}
+      \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \   'javascript': ['eslint'],
+      \}
 let b:ale_fixers = ['prettier', 'eslint']
 let g:ale_linter_aliases = {'vue': ['vue', 'javascript','typescript']}
 let g:ale_linters = {'vue': ['eslint', 'vls']}
@@ -283,8 +283,8 @@ augroup END
 augroup vimrc-python
   autocmd!
   autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
-      \ formatoptions+=croq softtabstop=4
-      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+        \ formatoptions+=croq softtabstop=4
+        \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
 
 " jedi-vim
@@ -300,7 +300,7 @@ let g:jedi#smart_auto_mappings = 0
 
 " ale
 :call extend(g:ale_linters, {
-    \'python': ['flake8'], })
+      \'python': ['flake8'], })
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
@@ -342,16 +342,15 @@ if !exists('g:airline_powerline_fonts')
   let g:airline_left_alt_sep      = '»'
   let g:airline_right_sep         = '◀'
   let g:airline_right_alt_sep     = '«'
-  let g:airline#extensions#branch#prefix     = '' "➔, ➥, ⎇
+  let g:airline#extensions#branch#prefix     = '➥' "➔, ➥, ⎇
   let g:airline#extensions#readonly#symbol   = '⊘'
   let g:airline#extensions#linecolumn#prefix = '¶'
   let g:airline#extensions#paste#symbol      = ''
-  let g:airline_symbols.linenr    = ''
+  let g:airline_symbols.linenr    = '✒'
   let g:airline_symbols.branch    = '⎇'
   let g:airline_symbols.paste     = ''
-  let g:airline_symbols.paste     = ''
   let g:airline_symbols.paste     = '∥'
-  let g:airline_symbols.whitespace = 'Ξ'
+  let g:airline_symbols.whitespace = '❯'
 else
   let g:airline#extensions#tabline#left_sep = ''
   let g:airline#extensions#tabline#left_alt_sep = ''
@@ -396,15 +395,16 @@ let g:indentLine_faster = 1
 
 let g:neotags#javascript#order = 'cCfmpo'
 let g:mta_filetypes = {
-    \ 'html' : 1,
-    \ 'xhtml' : 1,
-    \ 'xml' : 1,
-    \ 'jinja' : 1,
-    \ 'ejs' : 1,
-    \ 'jsx' : 1,
-    \ 'js' : 1,
-    \ 'php' : 1,
-    \}
+      \ 'html' : 1,
+      \ 'xhtml' : 1,
+      \ 'xml' : 1,
+      \ 'jinja' : 1,
+      \ 'ejs' : 1,
+      \ 'jsx' : 1,
+      \ 'tsx' : 1,
+      \ 'js' : 1,
+      \ 'php' : 1,
+      \}
 let g:mta_use_matchparen_group = 1
 let g:mta_set_default_matchtag_color = 1
 
@@ -418,17 +418,17 @@ let g:loaded_netrwPlugin = 1
 nnoremap <leader><space> :nohlsearch<cr>
 " Define o atalho Ctrl + N para abrir :Buffers com o fzf
 "nnoremap <c-o> :Buffers<cr>
-autocmd FileType html,css,php,js  EmmetInstall
+autocmd FileType html,css,php,js,tsx,jsx  EmmetInstall
 "imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 let g:user_emmet_install_global =1
 "autocmd FileType html,css,ejs,jsx,js, EmmetInstal
 let g:user_emmet_leader_key=','
 let g:user_emmet_settings = {
-\  'javascript' : {
-\      'extends' : 'jsx',
-\  },
-\}
+      \  'javascript' : {
+        \      'extends' : 'tsx',
+        \  },
+        \}
 let g:user_emmet_mode='n'    "only enable normal mode functions.
 let g:user_emmet_mode='inv'  "enable all functions, which is equal to
 let g:user_emmet_mode='a'    "enable all function in all mode.
@@ -443,13 +443,14 @@ let g:jsx_ext_required = 1
 syn region xmlTagName matchgroup=xmlEndTag start=+</+ end=+>+
 let g:mta_use_matchparen_group = 1
 let g:mta_filetypes = {
-    \ 'html' : 1,
-    \ 'xhtml' : 1,
-    \ 'xml' : 1,
-    \ 'jinja' : 1,
-    \ 'jsx' : 1,
-    \ 'js' : 1
-    \}
+      \ 'html' : 1,
+      \ 'xhtml' : 1,
+      \ 'xml' : 1,
+      \ 'jinja' : 1,
+      \ 'jsx' : 1,
+      \ 'tsx' : 1,
+      \ 'js' : 1
+      \}
 
 let g:vim_jsx_pretty_highlight_close_tag = 1
 let g:vim_jsx_pretty_colorful_config = 1
@@ -462,14 +463,14 @@ au FileType php      let b:AutoPairs = AutoPairsDefine({'<?' : '?>', '<?php': '?
 let g:mta_use_matchparen_group = 1
 highlight MatchTag ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
 let g:mta_filetypes = {
-    \ 'html' : 1,
-    \ 'xhtml' : 1,
-    \ 'xml' : 1,
-    \ 'jinja' : 1,
-    \ 'js' : 1,
-    \ 'jsx' : 1,
-    \ 'ejs' : 1,
-    \}
+      \ 'html' : 1,
+      \ 'xhtml' : 1,
+      \ 'xml' : 1,
+      \ 'jinja' : 1,
+      \ 'js' : 1,
+      \ 'jsx' : 1,
+      \ 'ejs' : 1,
+      \}
 
 " The Silver Searcher
 if executable('ag')
@@ -523,7 +524,7 @@ let g:equinusocio_material_bracket_improved = 1
 " use a better vertsplit char
 set fillchars+=vert:│
 
-"cursor for diferent  modes 
+"cursor for diferent  modes
 highlight Cursor guifg=white guibg=DARKSLATEGRAY
 highlight iCursor guifg=white guibg=AQUAMARINE
 "modos para terminais vte (gnome, xfce)
@@ -535,7 +536,7 @@ let &t_EI = "\<Esc>[2 q"
 nnoremap <c-x> :bp\|bd #<cr>
 "nnoremap <leader>c :bp\|bd #<CR>
 "noremap <leader>c :bd<CR>
-"manhas com buffer 
+"manhas com buffer
 ":sb {bufname} : Open buffer bufname in a split
 ":sbn : Open next buffer in a split
 ":sbp : Open previous buffer in a split
@@ -543,7 +544,7 @@ nnoremap <c-x> :bp\|bd #<cr>
 
 "defx-icons
 set tabstop=2 softtabstop=2 expandtab shiftwidth=2
-"autocompletion 
+"autocompletion
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 setlocal iskeyword+=-
@@ -564,7 +565,7 @@ let g:jsx_pragma_required = 1
 
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
-let g:tagalong_filetypes = ['html','js','javascript','jsx','tsx','ts','php','vue', 'javascriptreact', 'typescriptreact']
+let g:tagalong_filetypes = ['html','js','javascript','jsx','tsx','ts','php','vue','javascriptreact','typescriptreact']
 
 
 set cursorline
@@ -601,11 +602,11 @@ let g:ycm_autoclose_preview_window_after_completion=1
 let g:rehash256 = 1
 
 function! CleanExtraSpaces() "Function to clean unwanted spaces
-    let save_cursor = getpos(".")
-    let old_query = getreg('/')
-    silent! %s/\s\+$//e
-    call setpos('.', save_cursor)
-    call setreg('/', old_query)
+  let save_cursor = getpos(".")
+  let old_query = getreg('/')
+  silent! %s/\s\+$//e
+  call setpos('.', save_cursor)
+  call setreg('/', old_query)
 endfun
 
 " set guifont="monoid"
@@ -622,38 +623,38 @@ set nowritebackup
 set noswapfile
 
 " Update a buffer's contents on focus if it changed outside of Vim.
-au FocusGained,BufEnter * :checktime 
+au FocusGained,BufEnter * :checktime
 
 " Unset paste on InsertLeave.
 autocmd InsertLeave * silent! set nopaste
 
 " Only show the cursor line in the active buffer.
 augroup CursorLine
-    au!
-    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-    au WinLeave * setlocal nocursorline
-  augroup END
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
 
-  " Customize fzf colors to match your color scheme.
+" Customize fzf colors to match your color scheme.
 let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
+      \ { 'fg':      ['fg', 'Normal'],
+      \ 'bg':      ['bg', 'Normal'],
+      \ 'hl':      ['fg', 'Comment'],
+      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'hl+':     ['fg', 'Statement'],
+      \ 'info':    ['fg', 'PreProc'],
+      \ 'prompt':  ['fg', 'Conditional'],
+      \ 'pointer': ['fg', 'Exception'],
+      \ 'marker':  ['fg', 'Keyword'],
+      \ 'spinner': ['fg', 'Label'],
+      \ 'header':  ['fg', 'Comment'] }
 
 let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit',
-  \ 'ctrl-y': {lines -> setreg('*', join(lines, "\n"))}}
+      \ 'ctrl-t': 'tab split',
+      \ 'ctrl-x': 'split',
+      \ 'ctrl-v': 'vsplit',
+      \ 'ctrl-y': {lines -> setreg('*', join(lines, "\n"))}}
 
 
 
@@ -700,7 +701,7 @@ if exists('*complete_info')
 else
   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
-"renomar coc 
+"renomar coc
 nmap <leader>rn <Plug>(coc-rename)
 " Remap keys for applying codeAction to the current line.
 nmap <leader>ac  <Plug>(coc-codeaction)
@@ -713,7 +714,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 
-"prettier 
+"prettier
 let g:prettier#config#config_precedence = 'file-override'
 let g:prettier#config#parser = ''
 " set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
@@ -747,9 +748,9 @@ nmap <silent> gf <Plug>(coc-definition)
 " 'nerdtree'  - Hide nerdtree status line
 " 'list'      - Only show file type plus current line number out of total
 let g:airline_filetype_overrides = {
-  \ 'nerdtree': [ get(g:, 'NERDTreeStatusline', ''), '' ],
-  \ 'list': [ '%y', '%l/%L'],
-  \ }
+      \ 'nerdtree': [ get(g:, 'NERDTreeStatusline', ''), '' ],
+      \ 'list': [ '%y', '%l/%L'],
+      \ }
 
 
 
@@ -799,36 +800,36 @@ highlight NonText guibg=none
 
 " fzf-vim
 let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'Type'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Character'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
+      \ { 'fg':      ['fg', 'Normal'],
+      \ 'bg':      ['bg', 'Normal'],
+      \ 'hl':      ['fg', 'Comment'],
+      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'hl+':     ['fg', 'Statement'],
+      \ 'info':    ['fg', 'Type'],
+      \ 'border':  ['fg', 'Ignore'],
+      \ 'prompt':  ['fg', 'Character'],
+      \ 'pointer': ['fg', 'Exception'],
+      \ 'marker':  ['fg', 'Keyword'],
+      \ 'spinner': ['fg', 'Label'],
+      \ 'header':  ['fg', 'Comment'] }
 
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'angr',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'tabline': {
-      \   'left': [ ['buffers'] ],
-      \   'right': [ ['close'] ]
-      \ },
-      \ 'component_expand': {
-      \   'buffers': 'lightline#bufferline#buffers'
-      \ },
-      \ 'component_type': {
-      \   'buffers': 'tabsel'
-      \ }
-      \ }
+        \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
+        \ },
+        \ 'tabline': {
+          \   'left': [ ['buffers'] ],
+          \   'right': [ ['close'] ]
+          \ },
+          \ 'component_expand': {
+            \   'buffers': 'lightline#bufferline#buffers'
+            \ },
+            \ 'component_type': {
+              \   'buffers': 'tabsel'
+              \ }
+              \ }
 let g:lightline#bufferline#show_number  = 1
 let g:lightline#bufferline#shorten_path = 0
 let g:lightline#bufferline#unnamed      = '[No Name]'
@@ -895,18 +896,18 @@ let g:mkdp_browserfunc = ''
 " content_editable: if enable content editable for preview page, default: v:false
 " disable_filename: if disable filename header for preview page, default: 0
 let g:mkdp_preview_options = {
-    \ 'mkit': {},
-    \ 'katex': {},
-    \ 'uml': {},
-    \ 'maid': {},
-    \ 'disable_sync_scroll': 0,
-    \ 'sync_scroll_type': 'middle',
-    \ 'hide_yaml_meta': 1,
-    \ 'sequence_diagrams': {},
-    \ 'flowchart_diagrams': {},
-    \ 'content_editable': v:false,
-    \ 'disable_filename': 0
-    \ }
+      \ 'mkit': {},
+      \ 'katex': {},
+      \ 'uml': {},
+      \ 'maid': {},
+      \ 'disable_sync_scroll': 0,
+      \ 'sync_scroll_type': 'middle',
+      \ 'hide_yaml_meta': 1,
+      \ 'sequence_diagrams': {},
+      \ 'flowchart_diagrams': {},
+      \ 'content_editable': v:false,
+      \ 'disable_filename': 0
+      \ }
 
 " use a custom markdown style must be absolute path
 " like '/Users/username/markdown.css' or expand('~/markdown.css')
@@ -941,8 +942,8 @@ set guicursor+=i:blinkwait10
 
 autocmd OptionSet guicursor noautocmd set guicursor=
 au VimEnter,VimResume * set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
-  \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
-  \,sm:block-blinkwait185-blinkoff180-blinkon185
+      \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
+      \,sm:block-blinkwait185-blinkoff180-blinkon185
 
 au VimLeave,VimSuspend * set guicursor=a:block-blinkon0
 
@@ -961,30 +962,26 @@ inoremap <silent><expr> <Tab>
 
 
 " configs for moonfly theme
-let g:moonflyCursorColor = 1
-let g:moonflyTerminalColors = 0
-let g:moonflyUnderlineMatchParen = 1
-let g:moonflyUndercurls = 0
-let g:moonflyItalics = 0
 
 
-"fold => zE zF za zd 
-"zo	open current fold
-" /* zO	recursively open current fold
-"zzc	close current fold
-"zC	recursively close current fold
-"za	toggle current fold
-"zA	recursively open/close current fold
-"zm	reduce foldlevel by one
-"zM	close all folds
-"zr	increase foldlevel by one
-"zR	open all folds
+
+"fold => zE zF za zd
+"zo open current fold
+" /* zO recursively open current fold
+"zzc  close current fold
+"zC recursively close current fold
+"za toggle current fold
+"zA recursively open/close current fold
+"zm reduce foldlevel by one
+"zM close all folds
+"zr increase foldlevel by one
+"zR open all folds
 "
 "
 set wildoptions=pum
 highlight Folded guibg=darkolivegreen1 guifg=black
 highlight FoldColumn guibg=darkseagreen4 guifg=white
-let g:markdown_folding = 1
+let g:markdown_folding = 0
 
 "goyo config
 function! s:goyo_enter()
@@ -1014,19 +1011,19 @@ endfunction
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
-let g:vim_vue_plugin_config = { 
+let g:vim_vue_plugin_config = {
       \'syntax': {
-      \   'template': ['html'],
-      \   'script': ['javascript'],
-      \   'style': ['css'],
-      \},
-      \'full_syntax': [],
-      \'initial_indent': [],
-      \'attribute': 0,
-      \'keyword': 0,
-      \'foldexpr': 0,
-      \'debug': 0,
-      \}
+        \   'template': ['html'],
+        \   'script': ['javascript'],
+        \   'style': ['css'],
+        \},
+        \'full_syntax': [],
+        \'initial_indent': [],
+        \'attribute': 0,
+        \'keyword': 0,
+        \'foldexpr': 0,
+        \'debug': 0,
+        \}
 
 
 set wildignore+=**/node_modules/**
@@ -1094,7 +1091,7 @@ autocmd BufNewFile,BufRead *.ejs set filetype=html
 autocmd BufNewFile,BufRead *._ejs set filetype=html
 
 
-" resize current buffer by +/- 5 
+" resize current buffer by +/- 5
 
 nnoremap <silent> <Leader>= :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
@@ -1124,7 +1121,7 @@ if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
 endif
 
 
-set redrawtime=10000
+set redrawtime=20000
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -1135,13 +1132,13 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 
-let g:NERDTreeIgnore = ['^node_modules$'] " ignore node_modules to increase load speed 
+let g:NERDTreeIgnore = ['^node_modules$'] " ignore node_modules to increase load speed
 
 " NERDTree Syntax Highlight
 " " Enables folder icon highlighting using exact match
-let g:NERDTreeHighlightFolders = 1 
+let g:NERDTreeHighlightFolders = 1
 " " Highlights the folder name
-let g:NERDTreeHighlightFoldersFullName = 1 
+let g:NERDTreeHighlightFoldersFullName = 1
 " " Color customization
 let s:brown = "905532"
 let s:aqua =  "3AFFDB"
@@ -1162,35 +1159,35 @@ let s:white = "FFFFFF"
 let s:rspec_red = 'FE405F'
 let s:git_orange = 'F54D27'
 " " This line is needed to avoid error
-let g:NERDTreeExtensionHighlightColor = {} 
+let g:NERDTreeExtensionHighlightColor = {}
 " " Sets the color of css files to blue
-let g:NERDTreeExtensionHighlightColor['css'] = s:blue 
+let g:NERDTreeExtensionHighlightColor['css'] = s:blue
 " " This line is needed to avoid error
-let g:NERDTreeExactMatchHighlightColor = {} 
+let g:NERDTreeExactMatchHighlightColor = {}
 " " Sets the color for .gitignore files
-let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange 
+let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange
 " " This line is needed to avoid error
-let g:NERDTreePatternMatchHighlightColor = {} 
+let g:NERDTreePatternMatchHighlightColor = {}
 " " Sets the color for files ending with _spec.rb
-let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red 
+let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red
 " " Sets the color for folders that did not match any rule
-let g:WebDevIconsDefaultFolderSymbolColor = s:beige 
+let g:WebDevIconsDefaultFolderSymbolColor = s:beige
 " " Sets the color for files that did not match any rule
-let g:WebDevIconsDefaultFileSymbolColor = s:blue 
+let g:WebDevIconsDefaultFileSymbolColor = s:blue
 
 " NERDTree Git Plugin
 let g:NERDTreeGitStatusIndicat = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '☒',
-    \ "Unknown"   : "?"
-    \ }
+      \ "Modified"  : "✹",
+      \ "Staged"    : "✚",
+      \ "Untracked" : "✭",
+      \ "Renamed"   : "➜",
+      \ "Unmerged"  : "═",
+      \ "Deleted"   : "✖",
+      \ "Dirty"     : "✗",
+      \ "Clean"     : "✔︎",
+      \ 'Ignored'   : '☒',
+      \ "Unknown"   : "?"
+      \ }
 
 " Nerd Commenter
 " " Use compact syntax for prettified multi-line comments
@@ -1203,7 +1200,7 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 " " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
-" " Map ++ to call NERD Commenter and use iTerm key bindings 
+" " Map ++ to call NERD Commenter and use iTerm key bindings
 " " to bind Ctmd+/ to ++
 
 
@@ -1253,15 +1250,10 @@ let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 
-" Enable NERDCommenterToggle to check all selected lines is commented or not 
+" Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
 
 set re=0
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
 
 
 " filenames like *.xml, *.html, *.xhtml, ...
@@ -1272,12 +1264,12 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 " filenames like *.xml, *.xhtml, ...
 " This will make the list of non-closing tags self-closing in the specified files.
 "
-let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*tsx'
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.tsx'
 
 " filetypes like xml, html, xhtml, ...
 " These are the file types where this plugin is enabled.
 "
-let g:closetag_filetypes = 'html,xhtml,phtml'
+let g:closetag_filetypes = 'html,xhtml,phtml,tsx,jsx'
 
 " filetypes like xml, xhtml, ...
 " This will make the list of non-closing tags self-closing in the specified files.
@@ -1293,11 +1285,11 @@ let g:closetag_emptyTags_caseSensitive = 1
 " Disables auto-close if not in a "valid" region (based on filetype)
 "
 let g:closetag_regions = {
-    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
-    \ 'javascript.jsx': 'jsxRegion',
-    \ 'typescriptreact': 'jsxRegion,tsxRegion',
-    \ 'javascriptreact': 'jsxRegion',
-    \ }
+      \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+      \ 'javascript.jsx': 'jsxRegion',
+      \ 'typescriptreact': 'jsxRegion,tsxRegion',
+      \ 'javascriptreact': 'jsxRegion',
+      \ }
 
 " Shortcut for closing tags, default is '>'
 "
@@ -1317,6 +1309,7 @@ EOF
 " nnoremap <silent>b] :BufferLineCyclePrev<CR>
 map <C-m> :BufferLineCycleNext<CR>
 map <C-b> :BufferLineCyclePrev<CR>
+map <C-f> :Neoformat<CR>
 
 
 
@@ -1328,3 +1321,44 @@ nnoremap <silent><mymap> :BufferLineMovePrev<CR>
 nnoremap <silent>be :BufferLineSortByExtension<CR>
 nnoremap <silent>bd :BufferLineSortByDirectory<CR>
 nnoremap <silent><mymap> :lua require'bufferline'.sort_buffers_by(function (buf_a, buf_b) return buf_a.id < buf_b.id end)<CR>
+
+
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not
+let g:NERDToggleCheckAllLines = 1
+
+
+
+" Enable alignment
+let g:neoformat_basic_format_align = 1
+
+" Enable tab to spaces conversion
+let g:neoformat_basic_format_retab = 1
+
+" Enable trimmming of trailing whitespace
+let g:neoformat_basic_format_trim = 1
+let g:neoformat_run_all_formatters = 1
+
