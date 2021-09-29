@@ -114,8 +114,9 @@ Plug 'alvan/vim-closetag'
 Plug 'projekt0n/github-nvim-theme'
 " Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
-
 Plug 'akinsho/bufferline.nvim'
+" Plug 'kyazdani42/nvim-tree.lua'
+Plug 'yamatsum/nvim-cursorline'
 call plug#end()
 
 

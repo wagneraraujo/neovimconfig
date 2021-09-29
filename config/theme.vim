@@ -13,13 +13,14 @@
 " colorscheme github_dark_default
 colorscheme github_dark
 
+" colorscheme gotham256
 set background=dark
 syntax on
 set termguicolors     " enable true colors support
 let base16colorspace=256  " Access colors present in 256 colorspace
 "gruvbox PaperColor challenger_deep edge github_light nightfly OceanicNext night-owl onedark  onehalfdark  ayu onehalflight hybrid_material 
 "spacecamp_lite =dark
-let g:airline_theme ='badwolf'  
+let g:airline_theme ='angr'  
 "angr badwolf jellybeans murmur 'bubblegum'   'powerlineish  night-owl'
 let g:one_allow_italics = 1 " I love italic for comments
 let g:srcery_italic = 1

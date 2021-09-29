@@ -72,7 +72,6 @@ let g:nerdtree_tabs_focus_on_files=0
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 30
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite,.git
-nnoremap <silent> <C-]> :NERDTreeFind<CR>
 nnoremap <silent> <C-\> :NERDTreeToggle<CR>
 
 "Automaticaly close nvim if NERDTree is only thing left open
@@ -461,7 +460,7 @@ let g:jsx_pragma_required = 1
 au Filetype FILETYPE let b:AutoPairs = {"(": ")"}
 au FileType php      let b:AutoPairs = AutoPairsDefine({'<?' : '?>', '<?php': '?>'})
 let g:mta_use_matchparen_group = 1
-highlight MatchTag ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
+highlight MatchTag ctermfg=black ctermbg=lightgreen guifg=black guibg=lightblue
 let g:mta_filetypes = {
       \ 'html' : 1,
       \ 'xhtml' : 1,
@@ -1221,8 +1220,12 @@ endif
 
 "tag
 let g:vim_matchtag_enable_by_default = 0
-let g:vim_matchtag_files = '*.html,*.xml,*.js,*.jsx,*.vue,*.svelte,*.jsp'
+let g:vim_matchtag_files = '*.html,*.xml,*.js,*.jsx,*.tsx,*.vue,*.svelte,*.jsp'
+highlight link matchTag Search
+highlight link matchTag MatchParen
+highlight matchTag gui=reverse
 
+highlight link matchTagError Todo
 nmap <F8> :TagbarToggle<CR>
 
 
@@ -1299,8 +1302,9 @@ let g:closetag_shortcut = '>'
 "
 let g:closetag_close_shortcut = '<leader>>'
 
-lua << EOF
+lua <<EOF
 require("bufferline").setup{}
+
 EOF
 
 " These commands will navigate through buffers in order regardless of which mode you are using
@@ -1362,3 +1366,5 @@ let g:neoformat_basic_format_retab = 1
 let g:neoformat_basic_format_trim = 1
 let g:neoformat_run_all_formatters = 1
 
+" let g:nvim_tree_disable_default_keybindings = 1
+g:cursorword_highlight
