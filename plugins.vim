@@ -97,7 +97,7 @@ Plug 'Galooshi/import-js'
 " Plug 'haishanh/night-owl.vim'
 
 
-Plug 'tpope/vim-sleuth' " shiftwidth expandtab softtabstop smarttab
+" Plug 'tpope/vim-sleuth' " shiftwidth expandtab softtabstop smarttab
 Plug 'tyru/caw.vim'
 Plug 'jparise/vim-graphql'
 Plug 'peitalin/vim-jsx-typescript'
@@ -117,6 +117,10 @@ Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
 Plug 'akinsho/bufferline.nvim'
 " Plug 'kyazdani42/nvim-tree.lua'
 Plug 'yamatsum/nvim-cursorline'
+Plug 'simeji/winresizer'
+Plug 'pseewald/vim-anyfold'
+
+
 call plug#end()
 
 

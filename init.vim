@@ -1368,3 +1368,27 @@ let g:neoformat_run_all_formatters = 1
 
 " let g:nvim_tree_disable_default_keybindings = 1
 g:cursorword_highlight
+
+
+"vim-anyfold
+"zo, zO, zc, za
+" [[ and ]]
+" ]k and [j to navigate to the end of the previous block
+"
+filetype plugin indent on " required
+syntax on                 " required
+
+autocmd Filetype * AnyFoldActivate               " activate for all filetypes
+" or
+autocmd Filetype <your-filetype> AnyFoldActivate " activate for a specific filetype
+
+set foldlevel=0  " close all folds
+" or
+set foldlevel=99 " Open all folds
+
+
+" vinresizer
+"ctrl + e => h j k l
+"enteder or q cancel e E
+let g:winresizer_gui_enable = 1
+
