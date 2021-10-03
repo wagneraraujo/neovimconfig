@@ -1392,3 +1392,6 @@ set foldlevel=99 " Open all folds
 "enteder or q cancel e E
 let g:winresizer_gui_enable = 1
 
+" rust
+let g:rust_clip_command = 'xclip -selection clipboard'
+

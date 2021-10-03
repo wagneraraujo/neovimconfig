@@ -78,7 +78,7 @@ Plug 'tpope/vim-dispatch'
 " Plug 'embark-theme/vim', { 'as': 'embark' }
 " Plug 'mhartington/oceanic-next'
 " Plug 'antoinemadec/FixCursorHold.nvim'
-" Plug 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim'
 " Plug 'airblade/vim-gitgutter'
 " Plug 'jaredgorski/spacecamp'
 " Plug 'AndrewRadev/splitjoin.vim' " gS gJ
