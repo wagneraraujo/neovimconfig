@@ -1,6 +1,6 @@
 syntax on
 call plug#begin('~/.vim/plugged')
-" Plug 'leafOfTree/vim-vue-plugin'
+Plug 'leafOfTree/vim-vue-plugin'
 Plug 'luochen1990/rainbow'
 " Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -64,7 +64,7 @@ Plug 'mhinz/vim-mix-format'
 "      \ 'vue',
 "      \ 'yaml',
 "      \ 'html'] }
- Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 Plug 'tpope/vim-dispatch'
 " Plug 'pantharshit00/vim-prisma'
 " Plug 'yonlu/omni.vim' "omni
@@ -112,7 +112,7 @@ Plug 'SirVer/ultisnips'
 Plug 'mlaursen/vim-react-snippets'
 Plug 'alvan/vim-closetag'
 Plug 'projekt0n/github-nvim-theme'
-" Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
 Plug 'akinsho/bufferline.nvim'
 " Plug 'kyazdani42/nvim-tree.lua'

@@ -9,9 +9,9 @@
 
 " colorscheme github_light
 " colorscheme github_light_default
-" colorscheme github_dimmed
+colorscheme github_dimmed
 " colorscheme github_dark_default
-colorscheme github_dark
+" colorscheme github_dark
 
 " colorscheme gotham256
 set background=dark

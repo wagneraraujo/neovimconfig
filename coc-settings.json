@@ -1,6 +1,7 @@
 {
   "tsserver.log": "verbose",
   "tsserver.trace.server": "verbose",
+  "javascript.suggest.autoImports": true, 
   "tsserver.disableAutomaticTypeAcquisition": false,
   "suggest.completionItemKindLabels": {
     "class": "\uf0e8",
