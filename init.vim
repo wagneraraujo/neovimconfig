@@ -1,14 +1,18 @@
 syntax on
 
+" so ~/.vim/plugins.vim
+" so ~/.vim/plugin-config.vim
+" so ~/.vim/autoclose.vimV
 
 "=== plugins ===
-source ~/neovimconfig/plugins.vim
+so ~/neovimconfig/plugins.vim
+" so ~/neovimconfig/config/autoclose.vim
 
 " === theme ===
-source ~/neovimconfig/config/theme.vim
+so ~/neovimconfig/config/theme.vim
 
 " === basic config ===
-source ~/neovimconfig/config/basic.vim
+so ~/neovimconfig/config/basic.vim
 " source ~/neovimconfig/lua/lsp-config.lua
 
 
@@ -1394,4 +1398,9 @@ let g:winresizer_gui_enable = 1
 
 " rust
 let g:rust_clip_command = 'xclip -selection clipboard'
+set signcolumn=number
+set conceallevel=1
+set nornu
+set shortmess+=c
+
 

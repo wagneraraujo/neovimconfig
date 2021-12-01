@@ -12,7 +12,6 @@ Plug 'itchyny/vim-gitbranch'
 Plug 'airblade/vim-gitgutter'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'Yggdroot/indentLine'
-" Plug 'rakr/vim-one'
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 else
@@ -30,9 +29,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'plasticboy/vim-markdown'
 " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-" Plug 'pseewald/vim-anyfold'
 Plug 'cakebaker/scss-syntax.vim'
-" Plug 'Valloric/MatchTagAlways'
 Plug 'wakatime/vim-wakatime'
 Plug 'jparise/vim-graphql'
 Plug 'AndrewRadev/tagalong.vim'
@@ -46,7 +43,6 @@ let g:coc_global_extensions = ['coc-css','coc-styled-components','coc-json','coc
 
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
-" Plug 'joshdick/onedark.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'mhinz/vim-mix-format'
 " Plug 'prettier/vim-prettier', {
@@ -67,7 +63,7 @@ Plug 'mhinz/vim-mix-format'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-dispatch'
 " Plug 'pantharshit00/vim-prisma'
-" Plug 'yonlu/omni.vim' "omni
+Plug 'yonlu/omni.vim' "omni
 " Plug 'sainnhe/edge'
 " Plug 'Th3Whit3Wolf/one-nvim'
 " Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
@@ -78,16 +74,13 @@ Plug 'tpope/vim-dispatch'
 " Plug 'embark-theme/vim', { 'as': 'embark' }
 " Plug 'mhartington/oceanic-next'
 " Plug 'antoinemadec/FixCursorHold.nvim'
-Plug 'rust-lang/rust.vim'
+" Plug 'rust-lang/rust.vim'
 " Plug 'airblade/vim-gitgutter'
 " Plug 'jaredgorski/spacecamp'
 " Plug 'AndrewRadev/splitjoin.vim' " gS gJ
 
 Plug 'godlygeek/tabular'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-" Plug 'rakr/vim-colors-rakr'
-" Plug 'mhinz/vim-startify'
-" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'camspiers/lens.vim'
 
 Plug 'Galooshi/import-js'
@@ -97,9 +90,8 @@ Plug 'Galooshi/import-js'
 " Plug 'haishanh/night-owl.vim'
 
 
-" Plug 'tpope/vim-sleuth' " shiftwidth expandtab softtabstop smarttab
 Plug 'tyru/caw.vim'
-Plug 'jparise/vim-graphql'
+" Plug 'jparise/vim-graphql'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'vim-syntastic/syntastic'
@@ -119,8 +111,8 @@ Plug 'akinsho/bufferline.nvim'
 Plug 'yamatsum/nvim-cursorline'
 Plug 'simeji/winresizer'
 Plug 'pseewald/vim-anyfold'
-
-
+Plug 'tveskag/nvim-blame-line'
+Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 call plug#end()
 
 
