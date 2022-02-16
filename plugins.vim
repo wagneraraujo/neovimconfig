@@ -2,9 +2,7 @@ syntax on
 call plug#begin('~/.vim/plugged')
 Plug 'leafOfTree/vim-vue-plugin'
 Plug 'luochen1990/rainbow'
-" Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -28,18 +26,17 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'plasticboy/vim-markdown'
-" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'wakatime/vim-wakatime'
-Plug 'jparise/vim-graphql'
+" Plug 'jparise/vim-graphql'
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'mxw/vim-jsx'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-css','coc-styled-components','coc-json','coc-fzf-preview','coc-eslint', 'coc-highlight','coc-tsserver','coc-vimlsp','coc-prettier' ]
+let g:coc_global_extensions = ['coc-css','coc-styled-components','coc-json','coc-fzf-preview','coc-eslint', 'coc-highlight','coc-vimlsp','coc-prettier' ]
 
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
@@ -82,9 +79,7 @@ Plug 'yonlu/omni.vim' "omni
 Plug 'godlygeek/tabular'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'camspiers/lens.vim'
-
 Plug 'Galooshi/import-js'
-
 " Plug 'jaredgorski/spacecamp'
 " Plug 'ghifarit53/tokyonight-vim'
 " Plug 'haishanh/night-owl.vim'
@@ -93,9 +88,7 @@ Plug 'Galooshi/import-js'
 Plug 'tyru/caw.vim'
 " Plug 'jparise/vim-graphql'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'AndrewRadev/tagalong.vim'
 Plug 'vim-syntastic/syntastic'
-Plug 'neovim/nvim-lspconfig'
 Plug 'leafOfTree/vim-matchtag'
 " Plug 'preservim/tagbar'
 Plug 'preservim/nerdcommenter'
@@ -105,14 +98,17 @@ Plug 'mlaursen/vim-react-snippets'
 Plug 'alvan/vim-closetag'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'ryanoasis/vim-devicons'
-Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
+" Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
 Plug 'akinsho/bufferline.nvim'
 " Plug 'kyazdani42/nvim-tree.lua'
-Plug 'yamatsum/nvim-cursorline'
+" Plug 'yamatsum/nvim-cursorline'
 Plug 'simeji/winresizer'
 Plug 'pseewald/vim-anyfold'
 Plug 'tveskag/nvim-blame-line'
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
+Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 call plug#end()
 
 
