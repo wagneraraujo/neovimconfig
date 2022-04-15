@@ -72,7 +72,7 @@ Plug 'yonlu/omni.vim' "omni
 " Plug 'mhartington/oceanic-next'
 " Plug 'antoinemadec/FixCursorHold.nvim'
 " Plug 'rust-lang/rust.vim'
-" Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 " Plug 'jaredgorski/spacecamp'
 " Plug 'AndrewRadev/splitjoin.vim' " gS gJ
 
@@ -91,7 +91,7 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'vim-syntastic/syntastic'
 Plug 'leafOfTree/vim-matchtag'
 " Plug 'preservim/tagbar'
-Plug 'preservim/nerdcommenter'
+" Plug 'preservim/nerdcommenter'
 Plug 'sbdchd/neoformat'
 Plug 'SirVer/ultisnips'
 Plug 'mlaursen/vim-react-snippets'
@@ -109,6 +109,12 @@ Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+Plug ' nvim-treesitter/nvim-treesitter ' , { ' do ' : ' :TSUpdate ' }
+Plug 'antoinemadec/FixCursorHold.nvim'
+Plug 'numToStr/Comment.nvim'
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+
+
 call plug#end()
 
 
