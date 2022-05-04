@@ -42,24 +42,8 @@ Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'mhinz/vim-mix-format'
-" Plug 'prettier/vim-prettier', {
-"  \ 'do': 'yarn install',
-"  \ 'branch': 'release/1.x',
-"  \ 'for': [
-"      \ 'javascript',
-"      \ 'typescript',
-"      \ 'css',
-"      \ 'less',
-"      \ 'scss',
-"      \ 'json',
-"      \ 'graphql',
-"      \ 'markdown',
-"      \ 'vue',
-"      \ 'yaml',
-"      \ 'html'] }
 Plug 'w0rp/ale'
 Plug 'tpope/vim-dispatch'
-" Plug 'pantharshit00/vim-prisma'
 Plug 'yonlu/omni.vim' "omni
 " Plug 'sainnhe/edge'
 " Plug 'Th3Whit3Wolf/one-nvim'
@@ -71,11 +55,10 @@ Plug 'yonlu/omni.vim' "omni
 " Plug 'embark-theme/vim', { 'as': 'embark' }
 " Plug 'mhartington/oceanic-next'
 " Plug 'antoinemadec/FixCursorHold.nvim'
-" Plug 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim'
 Plug 'airblade/vim-gitgutter'
 " Plug 'jaredgorski/spacecamp'
 " Plug 'AndrewRadev/splitjoin.vim' " gS gJ
-
 Plug 'godlygeek/tabular'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'camspiers/lens.vim'
@@ -84,14 +67,13 @@ Plug 'Galooshi/import-js'
 " Plug 'ghifarit53/tokyonight-vim'
 " Plug 'haishanh/night-owl.vim'
 
-
 Plug 'tyru/caw.vim'
-" Plug 'jparise/vim-graphql'
+Plug 'jparise/vim-graphql'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'vim-syntastic/syntastic'
 Plug 'leafOfTree/vim-matchtag'
 " Plug 'preservim/tagbar'
-" Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 Plug 'sbdchd/neoformat'
 Plug 'SirVer/ultisnips'
 Plug 'mlaursen/vim-react-snippets'
@@ -99,7 +81,7 @@ Plug 'alvan/vim-closetag'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'ryanoasis/vim-devicons'
 " Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
-Plug 'akinsho/bufferline.nvim'
+" Plug 'akinsho/bufferline.nvim'
 " Plug 'kyazdani42/nvim-tree.lua'
 " Plug 'yamatsum/nvim-cursorline'
 Plug 'simeji/winresizer'
@@ -109,10 +91,10 @@ Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
-Plug ' nvim-treesitter/nvim-treesitter ' , { ' do ' : ' :TSUpdate ' }
+" Plug ' nvim-treesitter/nvim-treesitter ' , { ' do ' : ' :TSUpdate ' }
 Plug 'antoinemadec/FixCursorHold.nvim'
-Plug 'numToStr/Comment.nvim'
-Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+" Plug 'numToStr/Comment.nvim'
+" Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 
 
 call plug#end()

@@ -1306,10 +1306,6 @@ let g:closetag_shortcut = '>'
 "
 let g:closetag_close_shortcut = '<leader>>'
 
-lua <<EOF
-require("bufferline").setup{}
-
-EOF
 
 " These commands will navigate through buffers in order regardless of which mode you are using
 " e.g. if you change the order of buffers :bnext and :bprevious will not respect the custom ordering
@@ -1406,14 +1402,6 @@ set shortmess+=c
 
 let g:cursorhold_updatetime = 100
 
-lua << EOF
-require('Comment').setup()
-EOF
-
-
-lua << EOF
-require("bufferline").setup{}
-EOF
 
 nnoremap <silent>[b :BufferLineCycleNext<CR>
 nnoremap <silent>b] :BufferLineCyclePrev<CR>
@@ -1426,3 +1414,7 @@ nnoremap <silent><mymap> :BufferLineMovePrev<CR>
 nnoremap <silent>be :BufferLineSortByExtension<CR>
 nnoremap <silent>bd :BufferLineSortByDirectory<CR>
 nnoremap <silent><mymap> :lua require'bufferline'.sort_buffers_by(function (buf_a, buf_b) return buf_a.id < buf_b.id end)<CR>
+
+
+let g:rust_clip_command = 'xclip -selection clipboard'
+
