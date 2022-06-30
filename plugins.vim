@@ -36,7 +36,9 @@ Plug 'mxw/vim-jsx'
 Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-css','coc-styled-components','coc-json','coc-fzf-preview','coc-eslint', 'coc-highlight','coc-vimlsp','coc-prettier' ]
+let g:coc_global_extensions = ['coc-css','coc-styled-components','coc-json','coc-fzf-preview','coc-eslint', 'coc-highlight','coc-vimlsp','coc-prettier', 'coc-rust-analyzer' ]
+Plug 'dense-analysis/ale'
+
 
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'

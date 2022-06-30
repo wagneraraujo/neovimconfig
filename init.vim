@@ -1418,3 +1418,13 @@ nnoremap <silent><mymap> :lua require'bufferline'.sort_buffers_by(function (buf_
 
 let g:rust_clip_command = 'xclip -selection clipboard'
 
+let g:rustfmt_autosave = 1
+let g:rustfmt_emit_files = 1
+let g:rustfmt_fail_silently = 0
+
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
