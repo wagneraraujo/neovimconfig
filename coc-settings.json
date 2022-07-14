@@ -43,27 +43,31 @@
   "list.previewHighlightGroup": "Statement",
   "list.nextKeymap": "<C-e>",
   "list.previousKeymap": "<C-u>",
+   "prettier.singleQuote": true,
+  "javascript.autoClosingTags": true,
+  "typescript.autoClosingTags": true,
+  "emmet.includeLanguages": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html"
+  ],
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "typescript",
     "html",
-    "css"
+     "css",
+    "sass",
+    "scss",
+    "markdown",
+    "json",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "python"
   ],
-  "explorer.sources": [
-    {
-      "name": "buffer",
-      "expand": false
-    },
-    {
-      "name": "file",
-      "expand": true
-    }
-  ],
-  "explorer.keyMappings.global": {
-    "pl": "preview:labeling",
-    "pc": "preview:content",
-    "pp": "pasteFile"
-  },
   "languageserver": {
     "rust": {
       "command": "rust-analyzer",

@@ -54,9 +54,9 @@ Plug 'yonlu/omni.vim' "omni
 " Plug 'srcery-colors/srcery-vim'
 " Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'sainnhe/sonokai'
-" Plug 'embark-theme/vim', { 'as': 'embark' }
+Plug 'embark-theme/vim', { 'as': 'embark' }
 " Plug 'mhartington/oceanic-next'
-" Plug 'antoinemadec/FixCursorHold.nvim'
+Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'rust-lang/rust.vim'
 Plug 'airblade/vim-gitgutter'
 " Plug 'jaredgorski/spacecamp'
@@ -81,11 +81,6 @@ Plug 'sbdchd/neoformat'
 Plug 'mlaursen/vim-react-snippets'
 Plug 'alvan/vim-closetag'
 Plug 'projekt0n/github-nvim-theme'
-" Plug 'ryanoasis/vim-devicons'
-" Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
-" Plug 'akinsho/bufferline.nvim'
-" Plug 'kyazdani42/nvim-tree.lua'
-" Plug 'yamatsum/nvim-cursorline'
 Plug 'simeji/winresizer'
 Plug 'pseewald/vim-anyfold'
 Plug 'tveskag/nvim-blame-line'
@@ -93,11 +88,12 @@ Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
-" Plug ' nvim-treesitter/nvim-treesitter ' , { ' do ' : ' :TSUpdate ' }
 Plug 'antoinemadec/FixCursorHold.nvim'
-" Plug 'numToStr/Comment.nvim'
 Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
 Plug 'romgrk/barbar.nvim'
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'alvan/vim-closetag'
+
 call plug#end()
 
 
