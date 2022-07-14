@@ -1,7 +1,7 @@
 {
   "tsserver.log": "verbose",
   "tsserver.trace.server": "verbose",
-  "javascript.suggest.autoImports": true, 
+  "javascript.suggest.autoImports": true,
   "tsserver.disableAutomaticTypeAcquisition": false,
   "suggest.completionItemKindLabels": {
     "class": "\uf0e8",
@@ -67,8 +67,12 @@
   "languageserver": {
     "rust": {
       "command": "rust-analyzer",
-      "filetypes": ["rust"],
-      "rootPatterns": ["Cargo.toml"]
+      "filetypes": [
+        "rust"
+      ],
+      "rootPatterns": [
+        "Cargo.toml"
+      ]
     }
   }
 }

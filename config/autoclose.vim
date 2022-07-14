@@ -32,7 +32,7 @@ inoremap ";<tab> "";
 inoremap (;<tab> ();
 inoremap [;<tab> [];
 inoremap {;<tab> {};
-      "autoclose with , and position cursor after
+      "autoclose with , and position cursor afteri
 inoremap ',<tab> '',
 inoremap `,<tab> ``,
 inoremap ",<tab> "",
