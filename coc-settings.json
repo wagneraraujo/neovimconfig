@@ -46,13 +46,6 @@
    "prettier.singleQuote": true,
   "javascript.autoClosingTags": true,
   "typescript.autoClosingTags": true,
-  "emmet.includeLanguages": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "html"
-  ],
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "typescript",

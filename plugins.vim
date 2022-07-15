@@ -36,9 +36,8 @@ Plug 'mxw/vim-jsx'
 Plug 'neoclide/vim-jsx-improve'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-css','coc-styled-components','coc-json','coc-fzf-preview','coc-eslint', 'coc-highlight','coc-vimlsp','coc-prettier', 'coc-rust-analyzer' ]
+let g:coc_global_extensions = ['coc-css','coc-styled-components','coc-json','coc-fzf-preview', 'coc-rust-analyzer', 'coc-tsserver' ]
 Plug 'dense-analysis/ale'
-
 
 Plug 'LinArcX/mpbtl'
 Plug 'jiangmiao/auto-pairs'
@@ -96,7 +95,8 @@ Plug 'alvan/vim-closetag'
 " Plug 'numToStr/Comment.nvim'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
 call plug#end()
 
 
