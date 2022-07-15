@@ -75,7 +75,7 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'vim-syntastic/syntastic'
 Plug 'leafOfTree/vim-matchtag'
 " Plug 'preservim/tagbar'
-Plug 'preservim/nerdcommenter'
+" Plug 'preservim/nerdcommenter'
 Plug 'sbdchd/neoformat'
 " Plug 'SirVer/ultisnips'
 Plug 'mlaursen/vim-react-snippets'
@@ -90,9 +90,12 @@ Plug 'williamboman/nvim-lsp-installer'
 Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
-Plug 'romgrk/barbar.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'alvan/vim-closetag'
+" Plug 'tpope/vim-commentary'
+" Plug 'numToStr/Comment.nvim'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 

@@ -1410,17 +1410,17 @@ function! s:check_back_space() abort
 endfunction
 
 
-nnoremap <leader>w :BufferNext<CR>
-nnoremap <leader>z :BufferPrev<CR>
+" nnoremap <leader>w :BufferNext<CR>
+" nnoremap <leader>z :BufferPrev<CR>
+" 
 
 
-
-" noremap <leader>z :bp<CR>
-" noremap <leader>q :bp<CR>
-" noremap <leader>x :bn<CR>
-" noremap <leader>w :bn<CR>
-"nnoremap <C-Right>:bn <CR>
-"nnorema <C-Left>:bp <CR>
+noremap <leader>z :bp<CR>
+noremap <leader>q :bp<CR>
+noremap <leader>x :bn<CR>
+noremap <leader>w :bn<CR>
+nnoremap <C-Right>:bn <CR>
+nnorema <C-Left>:bp <CR>
 "
 
 " NOTE: If barbar's option dict isn't created yet, create it
@@ -1541,3 +1541,87 @@ let g:closetag_close_shortcut = '<leader>>'
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 let g:coc_global_config="$HOME/neovimconfig/coc-settings.json"
+autocmd FileType apache setlocal commentstring=#\ %s
+
+" lua << EOF
+" require('Comment').setup{
+" -- NOTE: The example below is a proper integration and it is RECOMMENDED.
+" {
+"     ---@param ctx CommentCtx
+"     pre_hook = function(ctx)
+"         -- Only calculate commentstring for tsx filetypes
+"         if vim.bo.filetype == 'typescriptreact' then
+"             local U = require('Comment.utils')
+"
+"             -- Determine whether to use linewise or blockwise commentstring
+"             local type = ctx.ctype == U.ctype.line and '__default' or '__multiline'
+"
+"             -- Determine the location where to calculate commentstring from
+"             local location = nil
+"             if ctx.ctype == U.ctype.block then
+"                 location = require('ts_context_commentstring.utils').get_cursor_location()
+"             elseif ctx.cmotion == U.cmotion.v or ctx.cmotion == U.cmotion.V then
+"                 location = require('ts_context_commentstring.utils').get_visual_start_location()
+"             end
+"
+"             return require('ts_context_commentstring.internal').calculate_commentstring({
+"                 key = type,
+"                 location = location,
+"             })
+"         end
+"     end,
+" }
+" }
+" EOF
+"
+"
+nnoremap <leader>c <cmd>lua require('ts_context_commentstring.internal').update_commentstring()<cr>
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  context_commentstring = {
+    enable = true,
+    config = {
+      javascript = {
+        __default = '// %s',
+        jsx_element = '{/* %s */}',
+        jsx_fragment = '{/* %s */}',
+        jsx_attribute = '// %s',
+        comment = '// %s'
+      }
+    }
+  }
+}
+
+
+
+require'nvim-treesitter.configs'.setup {
+  -- A list of parser names, or "all"
+  ensure_installed = { "c", "lua", "rust" },
+
+  -- Install parsers synchronously (only applied to `ensure_installed`)
+  sync_install = false,
+
+  -- Automatically install missing parsers when entering buffer
+  auto_install = true,
+
+  -- List of parsers to ignore installing (for "all")
+  ignore_install = { "javascript" },
+
+  highlight = {
+    -- `false` will disable the whole extension
+    enable = true,
+
+    -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
+    -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
+    -- the name of the parser)
+    -- list of language that will be disabled
+    disable = { "c", "rust" },
+
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
+EOF
