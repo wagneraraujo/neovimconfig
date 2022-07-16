@@ -1,0 +1,459 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+"	config/autoclose.vim	/^inoremap " ""<left>$/;"	m
+",	config/autoclose.vim	/^inoremap ", "",<left><left>$/;"	m
+",<CR>	config/autoclose.vim	/^inoremap ",<CR> "<CR>",<ESC>O$/;"	m
+",<tab>	config/autoclose.vim	/^inoremap ",<tab> "",$/;"	m
+";	config/autoclose.vim	/^inoremap "; "";<left><left>$/;"	m
+";<CR>	config/autoclose.vim	/^inoremap ";<CR> "<CR>";<ESC>O$/;"	m
+";<tab>	config/autoclose.vim	/^inoremap ";<tab> "";$/;"	m
+"<CR>	config/autoclose.vim	/^inoremap "<CR> "<CR>"<ESC>O$/;"	m
+"<tab>	config/autoclose.vim	/^inoremap "<tab> ""$/;"	m
+$FZF_DEFAULT_COMMAND	init.vim	/^  let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'$/;"	v
+$FZF_DEFAULT_COMMAND	init.vim	/^  let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git\/*"'$/;"	v
+$FZF_DEFAULT_COMMAND	init.vim	/^let $FZF_DEFAULT_COMMAND =  "find * -path '*\/\\.*' -prune -o -path 'node_modules\/**' -prune -o -path 'target\/**' -prune -o -path 'dist\/**' -prune -o  -type f -print -o -type l -print 2> \/dev\/null"$/;"	v
+'	config/autoclose.vim	/^inoremap ' ''<left>$/;"	m
+',	config/autoclose.vim	/^inoremap ', '',<left><left>$/;"	m
+',<CR>	config/autoclose.vim	/^inoremap ',<CR> '<CR>',<ESC>O$/;"	m
+',<tab>	config/autoclose.vim	/^inoremap ',<tab> '',$/;"	m
+';	config/autoclose.vim	/^inoremap '; '';<left><left>$/;"	m
+';<CR>	config/autoclose.vim	/^inoremap ';<CR> '<CR>';<ESC>O$/;"	m
+';<tab>	config/autoclose.vim	/^inoremap ';<tab> '';$/;"	m
+'<CR>	config/autoclose.vim	/^inoremap '<CR> '<CR>'<ESC>O$/;"	m
+'<tab>	config/autoclose.vim	/^inoremap '<tab> ''$/;"	m
+(	config/autoclose.vim	/^inoremap ( ()<left>$/;"	m
+(,	config/autoclose.vim	/^inoremap (, (),<left><left>$/;"	m
+(,<CR>	config/autoclose.vim	/^inoremap (,<CR> (<CR>),<ESC>O$/;"	m
+(,<tab>	config/autoclose.vim	/^inoremap (,<tab> (),$/;"	m
+(;	config/autoclose.vim	/^inoremap (; ();<left><left>$/;"	m
+(;<CR>	config/autoclose.vim	/^inoremap (;<CR> (<CR>);<ESC>O$/;"	m
+(;<tab>	config/autoclose.vim	/^inoremap (;<tab> ();$/;"	m
+(<CR>	config/autoclose.vim	/^inoremap (<CR> (<CR>)<ESC>O$/;"	m
+(<tab>	config/autoclose.vim	/^inoremap (<tab> ()$/;"	m
+<	init.vim	/^vmap < <gv$/;"	m
+<C-P>	init.vim	/^cnoremap <C-P> <C-R>=expand("%:p:h") . "\/" <CR>$/;"	m
+<C-S>	init.vim	/^inoremap <C-S> <C-O>:update<CR>$/;"	m
+<C-S>	init.vim	/^noremap <C-S> :update<CR>$/;"	m
+<C-\>	init.vim	/^nnoremap <silent> <C-\\> :NERDTreeToggle<CR>$/;"	m
+<C-\>	nvim-tree.vim	/^nnoremap <C-\\> :NvimTreeToggle<CR>$/;"	m
+<C-c>	init.vim	/^  vmap <C-c> :w !pbcopy<CR><CR>$/;"	m
+<C-f>	init.vim	/^map <C-f> :Neoformat<CR>$/;"	m
+<C-h>	init.vim	/^noremap <C-h> <C-w>h$/;"	m
+<C-j>	init.vim	/^nnoremap <C-j> :m .+1<CR>==$/;"	m
+<C-j>	init.vim	/^noremap <C-j> <C-w>j$/;"	m
+<C-j>	init.vim	/^vnoremap <C-j> :m '>+1<CR>gv=gv$/;"	m
+<C-k>	init.vim	/^nnoremap <C-k> :m .-2<CR>==$/;"	m
+<C-k>	init.vim	/^noremap <C-k> <C-w>k$/;"	m
+<C-k>	init.vim	/^vnoremap <C-k> :m '<-2<CR>gv=gv$/;"	m
+<C-l>	init.vim	/^noremap <C-l> <C-w>l$/;"	m
+<C-x>	init.vim	/^  vmap <C-x> :!pbcopy<CR>$/;"	m
+<F3>	init.vim	/^nmap <silent> <F3> :CHADopen<CR>$/;"	m
+<F4>	init.vim	/^nmap <silent> <F4> :TagbarToggle<CR>$/;"	m
+<F5>	init.vim	/^nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>$/;"	m
+<F8>	init.vim	/^nmap <F8> :TagbarToggle<CR>$/;"	m
+<F9>	init.vim	/^nnoremap <F9> :so $MYVIMRC<cr>$/;"	m
+<Leader>-	init.vim	/^nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2\/3)<CR>$/;"	m
+<Leader>0	init.vim	/^nnoremap <silent> <Leader>0 :exe "vertical resize " . (winwidth(0) * 3\/2)<CR>$/;"	m
+<Leader>9	init.vim	/^nnoremap <silent> <Leader>9 :exe "vertical resize " . (winwidth(0) * 2\/3)<CR>$/;"	m
+<Leader>=	init.vim	/^nnoremap <silent> <Leader>= :exe "resize " . (winheight(0) * 3\/2)<CR>$/;"	m
+<Leader>e	init.vim	/^noremap <Leader>e :e <C-R>=expand("%:p:h") . "\/" <CR>$/;"	m
+<Leader>ga	init.vim	/^noremap <Leader>ga :Gwrite<CR>$/;"	m
+<Leader>gb	init.vim	/^noremap <Leader>gb :Gblame<CR>$/;"	m
+<Leader>gc	init.vim	/^noremap <Leader>gc :Gcommit<CR>$/;"	m
+<Leader>gd	init.vim	/^noremap <Leader>gd :Gvdiff<CR>$/;"	m
+<Leader>gll	init.vim	/^noremap <Leader>gll :Gpull<CR>$/;"	m
+<Leader>gr	init.vim	/^noremap <Leader>gr :Gremove<CR>$/;"	m
+<Leader>gs	init.vim	/^noremap <Leader>gs :Gstatus<CR>$/;"	m
+<Leader>gsh	init.vim	/^noremap <Leader>gsh :Gpush<CR>$/;"	m
+<Leader>h	init.vim	/^noremap <Leader>h :<C-u>split<CR>$/;"	m
+<Leader>iF	init.vim	/^nnoremap <Leader>iF <Plug>(JsFileImportList)$/;"	m
+<Leader>iG	init.vim	/^nnoremap <Leader>iG <Plug>(JsGotoDefinition)$/;"	m
+<Leader>ic	init.vim	/^nnoremap <Leader>ic <Plug>(JsFixImport)$/;"	m
+<Leader>if	init.vim	/^nnoremap <Leader>if <Plug>(JsFileImport)$/;"	m
+<Leader>ig	init.vim	/^nnoremap <Leader>ig <Plug>(JsGotoDefinition)$/;"	m
+<Leader>ip	init.vim	/^nnoremap <Leader>ip <Plug>(PromptJsFileImport)$/;"	m
+<Leader>is	init.vim	/^nnoremap <Leader>is <Plug>(SortJsFileImport)$/;"	m
+<Leader>o	init.vim	/^nnoremap <Leader>o :.Gbrowse<CR>$/;"	m
+<Leader>te	init.vim	/^noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "\/" <CR>$/;"	m
+<Leader>v	init.vim	/^noremap <Leader>v :<C-u>vsplit<CR>$/;"	m
+<S-TAB>	init.vim	/^inoremap <expr><S-TAB> pumvisible() ? "\\<C-p>" : "\\<C-h>"$/;"	m
+<S-Tab>	init.vim	/^nnoremap <S-Tab> gT$/;"	m
+<S-t>	init.vim	/^nnoremap <silent> <S-t> :tabnew<CR>$/;"	m
+<TAB>	init.vim	/^inoremap <silent><expr> <TAB>$/;"	m
+<Tab>	init.vim	/^inoremap <silent><expr> <Tab>$/;"	m
+<Tab>	init.vim	/^nnoremap <Tab> gt$/;"	m
+<c-@>	init.vim	/^  inoremap <silent><expr> <c-@> coc#refresh()$/;"	m
+<c-i>	init.vim	/^nnoremap <c-i> :Ag<space>$/;"	m
+<c-p>	init.vim	/^nnoremap <c-p> :Files <cr>$/;"	m
+<c-space>	init.vim	/^  inoremap <silent><expr> <c-space> coc#refresh()$/;"	m
+<c-x>	init.vim	/^nnoremap <c-x> :bp\\|bd #<cr>$/;"	m
+<c-z>	init.vim	/^nnoremap <c-z> <nop>$/;"	m
+<cr>	init.vim	/^  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\\<C-y>" : "\\<C-g>u\\<CR>"$/;"	m
+<cr>	init.vim	/^  inoremap <expr> <cr> pumvisible() ? "\\<C-y>" : "\\<C-g>u\\<CR>"$/;"	m
+<leader>.	init.vim	/^nnoremap <leader>. :lcd %:p:h<CR>$/;"	m
+<leader><space>	init.vim	/^nnoremap <leader><space> :nohlsearch<cr>$/;"	m
+<leader><space>	init.vim	/^nnoremap <silent> <leader><space> :noh<cr>$/;"	m
+<leader>ac	init.vim	/^nmap <leader>ac  <Plug>(coc-codeaction)$/;"	m
+<leader>ac	init.vim	/^noremap <leader>ac :w <BAR> %bd <BAR> e# <BAR> bd# <CR>$/;"	m
+<leader>b	init.vim	/^nnoremap <silent> <leader>b :Buffers<CR>$/;"	m
+<leader>c	init.vim	/^noremap <leader>c :bd<CR>$/;"	m
+<leader>e	init.vim	/^nnoremap <silent> <leader>e :FZF -m<CR>$/;"	m
+<leader>f	init.vim	/^nnoremap <silent> <leader>f :Rgrep<CR>$/;"	m
+<leader>l	init.vim	/^nnoremap <leader>l <cmd>call setqflist([])<cr>$/;"	m
+<leader>n	nvim-tree.vim	/^nnoremap <leader>n :NvimTreeFindFile<CR>$/;"	m
+<leader>p	init.vim	/^noremap <leader>p "+gP<CR>$/;"	m
+<leader>q	init.vim	/^noremap <leader>q :bp<CR>$/;"	m
+<leader>qf	init.vim	/^nmap <leader>qf  <Plug>(coc-fix-current)$/;"	m
+<leader>r	nvim-tree.vim	/^nnoremap <leader>r :NvimTreeRefresh<CR>$/;"	m
+<leader>rn	init.vim	/^nmap <leader>rn <Plug>(coc-rename)$/;"	m
+<leader>sh	init.vim	/^nnoremap <silent> <leader>sh :terminal<CR>$/;"	m
+<leader>v	init.vim	/^nnoremap <leader>v <cmd>CHADopen<cr>$/;"	m
+<leader>w	init.vim	/^noremap <leader>w :bn<CR>$/;"	m
+<leader>y	init.vim	/^nmap <leader>y :History:<CR>$/;"	m
+>	init.vim	/^vmap > >gv$/;"	m
+CleanExtraSpaces	init.vim	/^function! CleanExtraSpaces() "Function to clean unwanted spaces$/;"	f
+CursorLine	init.vim	/^augroup CursorLine$/;"	a
+Find	init.vim	/^  command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git\/*" --color "always" '.shellescape(<q-args>).'| tr -d "\\017"', 1, <bang>0)$/;"	c
+FixWhitespace	config/theme.vim	/^command! FixWhitespace :%s\/\\s\\+$\/\/e$/;"	c
+Grep_Default_Options	init.vim	/^let Grep_Default_Options = '-IR'$/;"	v
+Grep_Skip_Dirs	init.vim	/^let Grep_Skip_Dirs = '.git node_modules'$/;"	v
+Grep_Skip_Files	init.vim	/^let Grep_Skip_Files = '*.log *.db'$/;"	v
+J	init.vim	/^vnoremap J :m '>+1<CR>gv=gv$/;"	m
+K	init.vim	/^nnoremap <silent> K :call <SID>show_documentation()<CR>$/;"	m
+K	init.vim	/^vnoremap K :m '<-2<CR>gv=gv$/;"	m
+N	init.vim	/^nnoremap N Nzzzv$/;"	m
+NERDTreeAutoDeleteBuffer	init.vim	/^let NERDTreeAutoDeleteBuffer = 1$/;"	v
+NERDTreeDirArrows	init.vim	/^let NERDTreeDirArrows = 1$/;"	v
+NERDTreeShowHidden	init.vim	/^let NERDTreeShowHidden=1$/;"	v
+NVIM_TUI_ENABLE_TRUE_COLOR	init.vim	/^let NVIM_TUI_ENABLE_TRUE_COLOR=1$/;"	v
+Prettier	init.vim	/^command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')$/;"	c
+Q	init.vim	/^cnoreabbrev Q q$/;"	m
+Q!	init.vim	/^cnoreabbrev Q! q!$/;"	m
+Qall	init.vim	/^cnoreabbrev Qall qall$/;"	m
+Qall!	init.vim	/^cnoreabbrev Qall! qall!$/;"	m
+ToggleThemeMode	functions/index.vim	/^function! ToggleThemeMode(style)$/;"	f
+VimCSS3Syntax	init.vim	/^augroup VimCSS3Syntax$/;"	a
+W	init.vim	/^cnoreabbrev W w$/;"	m
+W!	init.vim	/^cnoreabbrev W! w!$/;"	m
+WQ	init.vim	/^cnoreabbrev WQ wq$/;"	m
+Wa	init.vim	/^cnoreabbrev Wa wa$/;"	m
+Wq	init.vim	/^cnoreabbrev Wq wq$/;"	m
+XX	init.vim	/^noremap XX "+x<CR>$/;"	m
+YY	init.vim	/^noremap YY "+y<CR>$/;"	m
+[	config/autoclose.vim	/^inoremap [ []<left>$/;"	m
+[,	config/autoclose.vim	/^inoremap [, [],<left><left>$/;"	m
+[,<CR>	config/autoclose.vim	/^inoremap [,<CR> [<CR>],<ESC>O$/;"	m
+[,<tab>	config/autoclose.vim	/^inoremap [,<tab> [],$/;"	m
+[;	config/autoclose.vim	/^inoremap [; [];<left><left>$/;"	m
+[;<CR>	config/autoclose.vim	/^inoremap [;<CR> [<CR>];<ESC>O$/;"	m
+[;<tab>	config/autoclose.vim	/^inoremap [;<tab> [];$/;"	m
+[<CR>	config/autoclose.vim	/^inoremap [<CR> [<CR>]<ESC>O$/;"	m
+[<tab>	config/autoclose.vim	/^inoremap [<tab> []$/;"	m
+`	config/autoclose.vim	/^inoremap ` ``<left>$/;"	m
+`,	config/autoclose.vim	/^inoremap `, ``,<left><left>$/;"	m
+`,<CR>	config/autoclose.vim	/^inoremap `,<CR> `<CR>`,<ESC>O$/;"	m
+`,<tab>	config/autoclose.vim	/^inoremap `,<tab> ``,$/;"	m
+`;	config/autoclose.vim	/^inoremap `; ``;<left><left>$/;"	m
+`;<CR>	config/autoclose.vim	/^inoremap `;<CR> `<CR>`;<ESC>O$/;"	m
+`;<tab>	config/autoclose.vim	/^inoremap `;<tab> ``;$/;"	m
+`<CR>	config/autoclose.vim	/^inoremap `<CR> `<CR>`<ESC>O$/;"	m
+`<tab>	config/autoclose.vim	/^inoremap `<tab> ``$/;"	m
+b:ale_fixers	init.vim	/^let b:ale_fixers = ['prettier', 'eslint']$/;"	v
+base16colorspace	config/theme.vim	/^let base16colorspace=256  " Access colors present in 256 colorspace$/;"	v
+check_back_space	init.vim	/^function! s:check_back_space() abort$/;"	f
+custom_jarvis_colors	init.vim	/^function! s:custom_jarvis_colors()$/;"	f
+excludes	.importjs.js	/^  excludes: [".\/react-components\/**\/test\/**"]$/;"	p	class:module.exports
+g:CSApprox_loaded	config/basic.vim	/^let g:CSApprox_loaded = 1$/;"	v
+g:NERDAltDelims_java	init.vim	/^let g:NERDAltDelims_java = 1$/;"	v
+g:NERDCommentEmptyLines	init.vim	/^let g:NERDCommentEmptyLines = 1$/;"	v
+g:NERDCompactSexyComs	init.vim	/^let g:NERDCompactSexyComs = 1$/;"	v
+g:NERDCreateDefaultMappings	init.vim	/^let g:NERDCreateDefaultMappings = 1$/;"	v
+g:NERDCustomDelimiters	init.vim	/^let g:NERDCustomDelimiters = { 'c': { 'left': '\/**','right': '*\/' } }$/;"	v
+g:NERDDefaultAlign	init.vim	/^let g:NERDDefaultAlign = 'left'$/;"	v
+g:NERDSpaceDelims	init.vim	/^let g:NERDSpaceDelims = 1$/;"	v
+g:NERDToggleCheckAllLines	init.vim	/^let g:NERDToggleCheckAllLines = 1$/;"	v
+g:NERDTreeChDirMode	init.vim	/^let g:NERDTreeChDirMode=2$/;"	v
+g:NERDTreeExactMatchHighlightColor	init.vim	/^let g:NERDTreeExactMatchHighlightColor = {}$/;"	v
+g:NERDTreeExactMatchHighlightColor	init.vim	/^let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange$/;"	v
+g:NERDTreeExtensionHighlightColor	init.vim	/^let g:NERDTreeExtensionHighlightColor = {}$/;"	v
+g:NERDTreeExtensionHighlightColor	init.vim	/^let g:NERDTreeExtensionHighlightColor['css'] = s:blue$/;"	v
+g:NERDTreeGitStatusIndicat	init.vim	/^let g:NERDTreeGitStatusIndicat = {$/;"	v
+g:NERDTreeGitStatusIndicatorMapCustom	config/theme.vim	/^let g:NERDTreeGitStatusIndicatorMapCustom = {$/;"	v
+g:NERDTreeHighlightFolders	init.vim	/^let g:NERDTreeHighlightFolders = 1$/;"	v
+g:NERDTreeHighlightFoldersFullName	init.vim	/^let g:NERDTreeHighlightFoldersFullName = 1$/;"	v
+g:NERDTreeIgnore	init.vim	/^let g:NERDTreeIgnore = ['^node_modules$'] " ignore node_modules to increase load speed$/;"	v
+g:NERDTreeIgnore	init.vim	/^let g:NERDTreeIgnore=['\\.rbc$', '\\~$', '\\.pyc$', '\\.db$', '\\.sqlite$', '__pycache__']$/;"	v
+g:NERDTreeMapOpenInTabSilent	init.vim	/^let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'$/;"	v
+g:NERDTreePatternMatchHighlightColor	init.vim	/^let g:NERDTreePatternMatchHighlightColor = {}$/;"	v
+g:NERDTreePatternMatchHighlightColor	init.vim	/^let g:NERDTreePatternMatchHighlightColor['.*_spec\\.rb$'] = s:rspec_red$/;"	v
+g:NERDTreeShowBookmarks	init.vim	/^let g:NERDTreeShowBookmarks=0$/;"	v
+g:NERDTreeSortOrder	init.vim	/^let g:NERDTreeSortOrder=['^__\\.py$', '\\\/$', '*', '\\.swp$', '\\.bak$', '\\~$']$/;"	v
+g:NERDTreeWinPos	init.vim	/^let g:NERDTreeWinPos = "right"$/;"	v
+g:NERDTreeWinSize	init.vim	/^let g:NERDTreeWinSize = 30$/;"	v
+g:NERDTrimTrailingWhitespace	init.vim	/^let g:NERDTrimTrailingWhitespace = 1$/;"	v
+g:UltiSnipsEditSplit	init.vim	/^let g:UltiSnipsEditSplit="vertical"$/;"	v
+g:UltiSnipsExpandTrigger	init.vim	/^let g:UltiSnipsExpandTrigger="<tab>"$/;"	v
+g:UltiSnipsJumpBackwardTrigger	init.vim	/^let g:UltiSnipsJumpBackwardTrigger="<c-b>"$/;"	v
+g:UltiSnipsJumpForwardTrigger	init.vim	/^let g:UltiSnipsJumpForwardTrigger="<tab>"$/;"	v
+g:WebDevIconsDefaultFileSymbolColor	init.vim	/^let g:WebDevIconsDefaultFileSymbolColor = s:blue$/;"	v
+g:WebDevIconsDefaultFolderSymbolColor	init.vim	/^let g:WebDevIconsDefaultFolderSymbolColor = s:beige$/;"	v
+g:airline#extensions#ale#enabled	init.vim	/^let g:airline#extensions#ale#enabled = 1$/;"	v
+g:airline#extensions#branch#enabled	init.vim	/^let g:airline#extensions#branch#enabled = 1$/;"	v
+g:airline#extensions#branch#prefix	init.vim	/^  let g:airline#extensions#branch#prefix     = '➥' "➔, ➥, ⎇$/;"	v
+g:airline#extensions#linecolumn#prefix	init.vim	/^  let g:airline#extensions#linecolumn#prefix = '¶'$/;"	v
+g:airline#extensions#paste#symbol	init.vim	/^  let g:airline#extensions#paste#symbol      = ''$/;"	v
+g:airline#extensions#readonly#symbol	init.vim	/^  let g:airline#extensions#readonly#symbol   = '⊘'$/;"	v
+g:airline#extensions#tabline#enabled	init.vim	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
+g:airline#extensions#tabline#formatter	init.vim	/^let g:airline#extensions#tabline#formatter = 'jsformatter'$/;"	v
+g:airline#extensions#tabline#left_alt_sep	init.vim	/^  let g:airline#extensions#tabline#left_alt_sep = ''$/;"	v
+g:airline#extensions#tabline#left_alt_sep	init.vim	/^  let g:airline#extensions#tabline#left_alt_sep = '|'$/;"	v
+g:airline#extensions#tabline#left_sep	init.vim	/^  let g:airline#extensions#tabline#left_sep = ' '$/;"	v
+g:airline#extensions#tabline#left_sep	init.vim	/^  let g:airline#extensions#tabline#left_sep = ''$/;"	v
+g:airline#extensions#tagbar#enabled	init.vim	/^let g:airline#extensions#tagbar#enabled = 1$/;"	v
+g:airline#extensions#virtualenv#enabled	init.vim	/^let g:airline#extensions#virtualenv#enabled = 1$/;"	v
+g:airline_filetype_overrides	init.vim	/^let g:airline_filetype_overrides = {$/;"	v
+g:airline_left_alt_sep	init.vim	/^  let g:airline_left_alt_sep      = '»'$/;"	v
+g:airline_left_alt_sep	init.vim	/^  let g:airline_left_alt_sep = ''$/;"	v
+g:airline_left_sep	init.vim	/^  let g:airline_left_sep          = '▶'$/;"	v
+g:airline_left_sep	init.vim	/^  let g:airline_left_sep = ''$/;"	v
+g:airline_powerline_fonts	init.vim	/^let g:airline_powerline_fonts = 1$/;"	v
+g:airline_right_alt_sep	init.vim	/^  let g:airline_right_alt_sep     = '«'$/;"	v
+g:airline_right_alt_sep	init.vim	/^  let g:airline_right_alt_sep = ''$/;"	v
+g:airline_right_sep	init.vim	/^  let g:airline_right_sep         = '◀'$/;"	v
+g:airline_right_sep	init.vim	/^  let g:airline_right_sep = ''$/;"	v
+g:airline_skip_empty_sections	init.vim	/^let g:airline_skip_empty_sections = 1$/;"	v
+g:airline_symbols	init.vim	/^  let g:airline_symbols = {}$/;"	v
+g:airline_symbols	init.vim	/^  let g:airline_symbols.branch    = '⎇'$/;"	v
+g:airline_symbols	init.vim	/^  let g:airline_symbols.branch = ''$/;"	v
+g:airline_symbols	init.vim	/^  let g:airline_symbols.linenr    = '✒'$/;"	v
+g:airline_symbols	init.vim	/^  let g:airline_symbols.linenr = ''$/;"	v
+g:airline_symbols	init.vim	/^  let g:airline_symbols.paste     = ''$/;"	v
+g:airline_symbols	init.vim	/^  let g:airline_symbols.paste     = '∥'$/;"	v
+g:airline_symbols	init.vim	/^  let g:airline_symbols.readonly = ''$/;"	v
+g:airline_symbols	init.vim	/^  let g:airline_symbols.whitespace = '❯'$/;"	v
+g:airline_theme	config/theme.vim	/^let g:airline_theme ='angr'  $/;"	v
+g:ale_disable_lsp	init.vim	/^let g:ale_disable_lsp = 1$/;"	v
+g:ale_echo_msg_error_str	init.vim	/^let g:ale_echo_msg_error_str = 'E'$/;"	v
+g:ale_echo_msg_format	init.vim	/^let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'$/;"	v
+g:ale_echo_msg_warning_str	init.vim	/^let g:ale_echo_msg_warning_str = 'W'$/;"	v
+g:ale_fixers	init.vim	/^let g:ale_fixers = {$/;"	v
+g:ale_linter_aliases	init.vim	/^let g:ale_linter_aliases = {'vue': ['vue', 'javascript','typescript']}$/;"	v
+g:ale_linters	init.vim	/^let g:ale_linters = {'vue': ['eslint', 'vls']}$/;"	v
+g:ale_linters	init.vim	/^let g:ale_linters = {}$/;"	v
+g:anyfold_fold_comments	init.vim	/^let g:anyfold_fold_comments=1$/;"	v
+g:closetag_close_shortcut	init.vim	/^let g:closetag_close_shortcut = '<leader>>'$/;"	v
+g:closetag_emptyTags_caseSensitive	init.vim	/^let g:closetag_emptyTags_caseSensitive = 1$/;"	v
+g:closetag_filenames	init.vim	/^let g:closetag_filenames = '*.html,*.xhtml,*.phtml'$/;"	v
+g:closetag_filetypes	init.vim	/^let g:closetag_filetypes = 'html,xhtml,phtml'$/;"	v
+g:closetag_filetypes	init.vim	/^let g:closetag_filetypes = 'html,xhtml,phtml,tsx,jsx'$/;"	v
+g:closetag_regions	init.vim	/^let g:closetag_regions = {$/;"	v
+g:closetag_shortcut	init.vim	/^let g:closetag_shortcut = '>'$/;"	v
+g:closetag_xhtml_filenames	init.vim	/^let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'$/;"	v
+g:closetag_xhtml_filenames	init.vim	/^let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.tsx'$/;"	v
+g:closetag_xhtml_filetypes	init.vim	/^let g:closetag_xhtml_filetypes = 'xhtml,jsx'$/;"	v
+g:closetag_xhtml_filetypes	init.vim	/^let g:closetag_xhtml_filetypes = 'xhtml,jsx,tsx'$/;"	v
+g:coc_disable_startup_warning	init.vim	/^let g:coc_disable_startup_warning = 1$/;"	v
+g:coc_global_config	init.vim	/^let g:coc_global_config="$HOME\/neovimconfig\/coc-settings.json"$/;"	v
+g:coc_global_extensions	init.vim	/^  let g:coc_global_extensions += ['coc-eslint']$/;"	v
+g:coc_global_extensions	init.vim	/^  let g:coc_global_extensions += ['coc-prettier']$/;"	v
+g:coc_global_extensions	plugins.vim	/^let g:coc_global_extensions = ['coc-css','coc-styled-components','coc-json','coc-fzf-preview', 'coc-rust-analyzer', 'coc-tsserver' ]$/;"	v
+g:comfortable_motion_scroll_down_key	init.vim	/^let g:comfortable_motion_scroll_down_key = "j"$/;"	v
+g:comfortable_motion_scroll_up_key	init.vim	/^let g:comfortable_motion_scroll_up_key = "k"$/;"	v
+g:ctrlp_use_caching	init.vim	/^  let g:ctrlp_use_caching = 0$/;"	v
+g:ctrlp_user_command	init.vim	/^  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'$/;"	v
+g:cursorhold_updatetime	init.vim	/^let g:cursorhold_updatetime = 100$/;"	v
+g:embark_termcolors	init.vim	/^let g:embark_termcolors=256$/;"	v
+g:enable_bold_font	init.vim	/^let g:enable_bold_font = 1$/;"	v
+g:enable_italic_font	init.vim	/^let g:enable_italic_font = 1$/;"	v
+g:equinusocio_material_bracket_improved	init.vim	/^let g:equinusocio_material_bracket_improved = 1$/;"	v
+g:equinusocio_material_hide_vertsplit	init.vim	/^let g:equinusocio_material_hide_vertsplit = 1$/;"	v
+g:equinusocio_material_less	init.vim	/^let g:equinusocio_material_less = 50$/;"	v
+g:equinusocio_material_style	init.vim	/^let g:equinusocio_material_style = 'default'$/;"	v
+g:fzf_action	init.vim	/^let g:fzf_action = {$/;"	v
+g:fzf_colors	init.vim	/^let g:fzf_colors =$/;"	v
+g:github_function_style	config/theme.vim	/^let g:github_function_style = "italic"$/;"	v
+g:github_sidebars	config/theme.vim	/^let g:github_sidebars = ["qf", "vista_kind", "terminal", "packer"]$/;"	v
+g:highlightedyank_highlight_duration	init.vim	/^let g:highlightedyank_highlight_duration = 1000$/;"	v
+g:indentLine_char	init.vim	/^let g:indentLine_char = '|'$/;"	v
+g:indentLine_concealcursor	init.vim	/^let g:indentLine_concealcursor = 'inc'$/;"	v
+g:indentLine_concealcursor	init.vim	/^let g:indentLine_concealcursor = 0$/;"	v
+g:indentLine_conceallevel	init.vim	/^let g:indentLine_conceallevel = 2$/;"	v
+g:indentLine_enabled	init.vim	/^let g:indentLine_enabled = 1$/;"	v
+g:indentLine_faster	init.vim	/^let g:indentLine_faster = 1$/;"	v
+g:javascript_enable_domhtmlcss	init.vim	/^let g:javascript_enable_domhtmlcss = 1$/;"	v
+g:jedi#completions_command	init.vim	/^let g:jedi#completions_command = "<C-Space>"$/;"	v
+g:jedi#documentation_command	init.vim	/^let g:jedi#documentation_command = "K"$/;"	v
+g:jedi#goto_assignments_command	init.vim	/^let g:jedi#goto_assignments_command = "<leader>g"$/;"	v
+g:jedi#goto_definitions_command	init.vim	/^let g:jedi#goto_definitions_command = "<leader>d"$/;"	v
+g:jedi#popup_on_dot	init.vim	/^let g:jedi#popup_on_dot = 0$/;"	v
+g:jedi#rename_command	init.vim	/^let g:jedi#rename_command = "<leader>r"$/;"	v
+g:jedi#show_call_signatures	init.vim	/^let g:jedi#show_call_signatures = "0"$/;"	v
+g:jedi#smart_auto_mappings	init.vim	/^let g:jedi#smart_auto_mappings = 0$/;"	v
+g:jedi#usages_command	init.vim	/^let g:jedi#usages_command = "<leader>n"$/;"	v
+g:js_file_import_prompt_if_no_tag	init.vim	/^let g:js_file_import_prompt_if_no_tag = 0$/;"	v
+g:js_file_import_sort_after_insert	init.vim	/^let g:js_file_import_sort_after_insert = 1$/;"	v
+g:js_file_import_use_fzf	init.vim	/^let g:js_file_import_use_fzf = 1$/;"	v
+g:jsx_ext_required	init.vim	/^let g:jsx_ext_required = 0$/;"	v
+g:jsx_ext_required	init.vim	/^let g:jsx_ext_required = 1$/;"	v
+g:jsx_pragma_required	init.vim	/^let g:jsx_pragma_required = 1$/;"	v
+g:lightline	init.vim	/^let g:lightline = {$/;"	v
+g:lightline	init.vim	/^let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}$/;"	v
+g:lightline	init.vim	/^let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}$/;"	v
+g:lightline#bufferline#shorten_path	init.vim	/^let g:lightline#bufferline#shorten_path = 0$/;"	v
+g:lightline#bufferline#show_number	init.vim	/^let g:lightline#bufferline#show_number  = 1$/;"	v
+g:lightline#bufferline#unnamed	init.vim	/^let g:lightline#bufferline#unnamed      = '[No Name]'$/;"	v
+g:loaded_netrw	init.vim	/^let g:loaded_netrw       = 1$/;"	v
+g:loaded_netrwPlugin	init.vim	/^let g:loaded_netrwPlugin = 1$/;"	v
+g:make	plugins.vim	/^        let g:make = 'make'$/;"	v
+g:make	plugins.vim	/^let g:make = 'gmake'$/;"	v
+g:markdown_folding	init.vim	/^let g:markdown_folding = 0$/;"	v
+g:mkdp_auto_close	init.vim	/^let g:mkdp_auto_close = 1$/;"	v
+g:mkdp_auto_start	init.vim	/^let g:mkdp_auto_start = 0$/;"	v
+g:mkdp_browser	init.vim	/^let g:mkdp_browser = ''$/;"	v
+g:mkdp_browserfunc	init.vim	/^let g:mkdp_browserfunc = ''$/;"	v
+g:mkdp_command_for_global	init.vim	/^let g:mkdp_command_for_global = 0$/;"	v
+g:mkdp_echo_preview_url	init.vim	/^let g:mkdp_echo_preview_url = 0$/;"	v
+g:mkdp_filetypes	init.vim	/^let g:mkdp_filetypes = ['markdown']$/;"	v
+g:mkdp_highlight_css	init.vim	/^let g:mkdp_highlight_css = ''$/;"	v
+g:mkdp_markdown_css	init.vim	/^let g:mkdp_markdown_css = ''$/;"	v
+g:mkdp_open_ip	init.vim	/^let g:mkdp_open_ip = ''$/;"	v
+g:mkdp_open_to_the_world	init.vim	/^let g:mkdp_open_to_the_world = 0$/;"	v
+g:mkdp_page_title	init.vim	/^let g:mkdp_page_title = '「${name}」'$/;"	v
+g:mkdp_port	init.vim	/^let g:mkdp_port = ''$/;"	v
+g:mkdp_preview_options	init.vim	/^let g:mkdp_preview_options = {$/;"	v
+g:mkdp_refresh_slow	init.vim	/^let g:mkdp_refresh_slow = 0$/;"	v
+g:mta_filetypes	init.vim	/^let g:mta_filetypes = {$/;"	v
+g:mta_set_default_matchtag_color	init.vim	/^let g:mta_set_default_matchtag_color = 1$/;"	v
+g:mta_use_matchparen_group	config/theme.vim	/^let g:mta_use_matchparen_group = 1$/;"	v
+g:mta_use_matchparen_group	init.vim	/^let g:mta_use_matchparen_group = 1$/;"	v
+g:neoformat_basic_format_align	init.vim	/^let g:neoformat_basic_format_align = 1$/;"	v
+g:neoformat_basic_format_retab	init.vim	/^let g:neoformat_basic_format_retab = 1$/;"	v
+g:neoformat_basic_format_trim	init.vim	/^let g:neoformat_basic_format_trim = 1$/;"	v
+g:neoformat_run_all_formatters	init.vim	/^let g:neoformat_run_all_formatters = 1$/;"	v
+g:neotags#javascript#order	init.vim	/^let g:neotags#javascript#order = 'cCfmpo'$/;"	v
+g:nerdtree_tabs_focus_on_files	init.vim	/^let g:nerdtree_tabs_focus_on_files=0$/;"	v
+g:nvim_tree_add_trailing	nvim-tree.vim	/^let g:nvim_tree_add_trailing = 1 "0 by default, append a trailing slash to folder names$/;"	v
+g:nvim_tree_auto_close	nvim-tree.vim	/^let g:nvim_tree_auto_close = 1 "0 by default, closes the tree when it's the last window$/;"	v
+g:nvim_tree_auto_ignore_ft	nvim-tree.vim	/^let g:nvim_tree_auto_ignore_ft = [ 'startify', 'dashboard' ] "empty by default, don't auto open tree on specific filetypes.$/;"	v
+g:nvim_tree_auto_open	nvim-tree.vim	/^let g:nvim_tree_auto_open = 1 "0 by default, opens the tree when typing `vim $DIR` or `vim`$/;"	v
+g:nvim_tree_auto_resize	nvim-tree.vim	/^let g:nvim_tree_auto_resize = 0 "1 by default, will resize the tree to its saved width when opening a file$/;"	v
+g:nvim_tree_disable_netrw	nvim-tree.vim	/^let g:nvim_tree_disable_netrw = 0 "1 by default, disables netrw$/;"	v
+g:nvim_tree_disable_window_picker	nvim-tree.vim	/^let g:nvim_tree_disable_window_picker = 1 "0 by default, will disable the window picker.$/;"	v
+g:nvim_tree_follow	nvim-tree.vim	/^let g:nvim_tree_follow = 1 "0 by default, this option allows the cursor to be updated when entering a buffer$/;"	v
+g:nvim_tree_follow_update_path	nvim-tree.vim	/^let g:nvim_tree_follow_update_path = 1 "0 by default, will update the path of the current dir if the file is not inside the tree.$/;"	v
+g:nvim_tree_git_hl	nvim-tree.vim	/^let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).$/;"	v
+g:nvim_tree_gitignore	nvim-tree.vim	/^let g:nvim_tree_gitignore = 1 "0 by default$/;"	v
+g:nvim_tree_group_empty	nvim-tree.vim	/^let g:nvim_tree_group_empty = 1 " 0 by default, compact folders that only contain a single folder into one node in the file tree$/;"	v
+g:nvim_tree_hide_dotfiles	nvim-tree.vim	/^let g:nvim_tree_hide_dotfiles = 1 "0 by default, this option hides files and folders starting with a dot `.`$/;"	v
+g:nvim_tree_highlight_opened_files	nvim-tree.vim	/^let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files\/directories.$/;"	v
+g:nvim_tree_hijack_cursor	nvim-tree.vim	/^let g:nvim_tree_hijack_cursor = 0 "1 by default, when moving cursor in the tree, will position the cursor at the start of the file on the current line$/;"	v
+g:nvim_tree_hijack_netrw	nvim-tree.vim	/^let g:nvim_tree_hijack_netrw = 0 "1 by default, prevents netrw from automatically opening when opening directories (but lets you keep its other utilities)$/;"	v
+g:nvim_tree_icon_padding	nvim-tree.vim	/^let g:nvim_tree_icon_padding = ' ' "one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.$/;"	v
+g:nvim_tree_icons	nvim-tree.vim	/^let g:nvim_tree_icons = {$/;"	v
+g:nvim_tree_ignore	nvim-tree.vim	/^let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ] "empty by default$/;"	v
+g:nvim_tree_indent_markers	nvim-tree.vim	/^let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open$/;"	v
+g:nvim_tree_lsp_diagnostics	nvim-tree.vim	/^let g:nvim_tree_lsp_diagnostics = 1 "0 by default, will show lsp diagnostics in the signcolumn. See :help nvim_tree_lsp_diagnostics$/;"	v
+g:nvim_tree_quit_on_open	nvim-tree.vim	/^let g:nvim_tree_quit_on_open = 1 "0 by default, closes the tree when you open a file$/;"	v
+g:nvim_tree_refresh_wait	nvim-tree.vim	/^let g:nvim_tree_refresh_wait = 500 "1000 by default, control how often the tree can be refreshed, 1000 means the tree can be refresh once per 1000ms.$/;"	v
+g:nvim_tree_respect_buf_cwd	nvim-tree.vim	/^let g:nvim_tree_respect_buf_cwd = 1 "0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.$/;"	v
+g:nvim_tree_root_folder_modifier	nvim-tree.vim	/^let g:nvim_tree_root_folder_modifier = ':~' "This is the default. See :help filename-modifiers for more options$/;"	v
+g:nvim_tree_show_icons	nvim-tree.vim	/^let g:nvim_tree_show_icons = {$/;"	v
+g:nvim_tree_side	nvim-tree.vim	/^let g:nvim_tree_side = 'right' "left by default$/;"	v
+g:nvim_tree_special_files	nvim-tree.vim	/^let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 } " List of filenames that gets highlighted with NvimTreeSpecialFile$/;"	v
+g:nvim_tree_symlink_arrow	nvim-tree.vim	/^let g:nvim_tree_symlink_arrow = ' >> ' " defaults to ' ➛ '. used as a separator between symlinks' source and target.$/;"	v
+g:nvim_tree_tab_open	nvim-tree.vim	/^let g:nvim_tree_tab_open = 1 "0 by default, will open the tree when entering a new tab and the tree was previously open$/;"	v
+g:nvim_tree_update_cwd	nvim-tree.vim	/^let g:nvim_tree_update_cwd = 1 "0 by default, will update the tree cwd when changing nvim's directory (DirChanged event). Behaves strangely with autochdir set.$/;"	v
+g:nvim_tree_width	nvim-tree.vim	/^let g:nvim_tree_width = 40 "30 by default, can be width_in_columns or 'width_in_percent%'$/;"	v
+g:nvim_tree_window_picker_exclude	nvim-tree.vim	/^let g:nvim_tree_window_picker_exclude = {$/;"	v
+g:one_allow_italics	config/theme.vim	/^let g:one_allow_italics = 1 " I love italic for comments$/;"	v
+g:polyglot_disabled	init.vim	/^let g:polyglot_disabled = ['python']$/;"	v
+g:prettier#autoformat	init.vim	/^let g:prettier#autoformat =1$/;"	v
+g:prettier#autoformat_config_present	init.vim	/^let g:prettier#autoformat_config_present = 1$/;"	v
+g:prettier#config#config_precedence	init.vim	/^let g:prettier#config#config_precedence = 'file-override'$/;"	v
+g:prettier#config#parser	init.vim	/^let g:prettier#config#parser = ''$/;"	v
+g:prettier#quickfix_enabled	init.vim	/^let g:prettier#quickfix_enabled =1$/;"	v
+g:rainbow_active	config/theme.vim	/^let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle$/;"	v
+g:rainbow_active	init.vim	/^let g:rainbow_active = 1$/;"	v
+g:rehash256	init.vim	/^let g:rehash256 = 1$/;"	v
+g:rg_derive_root	init.vim	/^  let g:rg_derive_root='true'$/;"	v
+g:rust_clip_command	init.vim	/^let g:rust_clip_command = 'xclip -selection clipboard'$/;"	v
+g:rustfmt_autosave	init.vim	/^let g:rustfmt_autosave = 1$/;"	v
+g:rustfmt_emit_files	init.vim	/^let g:rustfmt_emit_files = 1$/;"	v
+g:rustfmt_fail_silently	init.vim	/^let g:rustfmt_fail_silently = 0$/;"	v
+g:srcery_italic	config/theme.vim	/^let g:srcery_italic = 1$/;"	v
+g:syntastic_always_populate_loc_list	init.vim	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
+g:syntastic_auto_jump	init.vim	/^let g:syntastic_auto_jump = 1$/;"	v
+g:syntastic_auto_loc_list	init.vim	/^let g:syntastic_auto_loc_list = 1$/;"	v
+g:syntastic_check_on_open	init.vim	/^let g:syntastic_check_on_open = 1$/;"	v
+g:syntastic_check_on_wq	init.vim	/^let g:syntastic_check_on_wq = 0$/;"	v
+g:tagalong_filetypes	init.vim	/^let g:tagalong_filetypes = ['html','js','javascript','jsx','tsx','ts','php','vue','javascriptreact','typescriptreact']$/;"	v
+g:tagbar_autofocus	init.vim	/^let g:tagbar_autofocus = 1               " Auto focus on tagbar$/;"	v
+g:tagbar_autofocus	init.vim	/^let g:tagbar_autofocus = 1$/;"	v
+g:tokyonight_style	config/theme.vim	/^let g:tokyonight_style = 'storm' " available: night, storm$/;"	v
+g:user_emmet_install_global	init.vim	/^let g:user_emmet_install_global =1$/;"	v
+g:user_emmet_leader_key	init.vim	/^let g:user_emmet_leader_key=','$/;"	v
+g:user_emmet_mode	init.vim	/^let g:user_emmet_mode='a'    "enable all function in all mode.$/;"	v
+g:user_emmet_mode	init.vim	/^let g:user_emmet_mode='inv'  "enable all functions, which is equal to$/;"	v
+g:user_emmet_mode	init.vim	/^let g:user_emmet_mode='n'    "only enable normal mode functions.$/;"	v
+g:user_emmet_settings	init.vim	/^let g:user_emmet_settings = {$/;"	v
+g:vim_jsx_pretty_colorful_config	init.vim	/^let g:vim_jsx_pretty_colorful_config = 1$/;"	v
+g:vim_jsx_pretty_highlight_close_tag	init.vim	/^let g:vim_jsx_pretty_highlight_close_tag = 1$/;"	v
+g:vim_matchtag_enable_by_default	init.vim	/^let g:vim_matchtag_enable_by_default = 0$/;"	v
+g:vim_matchtag_files	init.vim	/^let g:vim_matchtag_files = '*.html,*.xml,*.js,*.jsx,*.tsx,*.vue,*.svelte,*.jsp'$/;"	v
+g:vim_vue_plugin_config	init.vim	/^let g:vim_vue_plugin_config = {$/;"	v
+g:winresizer_gui_enable	init.vim	/^let g:winresizer_gui_enable = 1$/;"	v
+g:xml_syntax_folding	init.vim	/^let g:xml_syntax_folding = 0$/;"	v
+g:yats_host_keyword	init.vim	/^let g:yats_host_keyword = 1$/;"	v
+g:ycm_autoclose_preview_window_after_completion	init.vim	/^let g:ycm_autoclose_preview_window_after_completion=1$/;"	v
+gd	init.vim	/^nmap <silent> gd <Plug>(coc-definition)$/;"	m
+gf	init.vim	/^nmap <silent> gf <Plug>(coc-definition)$/;"	m
+gi	init.vim	/^nmap <silent> gi <Plug>(coc-implementation)$/;"	m
+goyo_enter	init.vim	/^function! s:goyo_enter()$/;"	f
+goyo_leave	init.vim	/^function! s:goyo_leave()$/;"	f
+gr	init.vim	/^nmap <silent> gr <Plug>(coc-references)$/;"	m
+gy	init.vim	/^nmap <silent> gy <Plug>(coc-type-definition)$/;"	m
+mapleader	config/basic.vim	/^let mapleader=','$/;"	v
+mygroup	init.vim	/^augroup mygroup$/;"	a
+n	init.vim	/^nnoremap n nzzzv$/;"	m
+no_buffers_menu	config/basic.vim	/^let no_buffers_menu=1$/;"	v
+python_highlight_all	init.vim	/^let python_highlight_all = 1$/;"	v
+q	init.vim	/^map q <Nop>$/;"	m
+s:aqua	init.vim	/^let s:aqua =  "3AFFDB"$/;"	v
+s:beige	init.vim	/^let s:beige = "F5C06F"$/;"	v
+s:blue	init.vim	/^let s:blue = "689FB6"$/;"	v
+s:brown	init.vim	/^let s:brown = "905532"$/;"	v
+s:darkBlue	init.vim	/^let s:darkBlue = "44788E"$/;"	v
+s:darkOrange	init.vim	/^let s:darkOrange = "F16529"$/;"	v
+s:git_orange	init.vim	/^let s:git_orange = 'F54D27'$/;"	v
+s:green	init.vim	/^let s:green = "8FAA54"$/;"	v
+s:lightGreen	init.vim	/^let s:lightGreen = "31B53E"$/;"	v
+s:lightPurple	init.vim	/^let s:lightPurple = "834F79"$/;"	v
+s:orange	init.vim	/^let s:orange = "D4843E"$/;"	v
+s:pink	init.vim	/^let s:pink = "CB6F6F"$/;"	v
+s:purple	init.vim	/^let s:purple = "834F79"$/;"	v
+s:red	init.vim	/^let s:red = "AE403F"$/;"	v
+s:rspec_red	init.vim	/^let s:rspec_red = 'FE405F'$/;"	v
+s:salmon	init.vim	/^let s:salmon = "EE6E73"$/;"	v
+s:white	init.vim	/^let s:white = "FFFFFF"$/;"	v
+s:yellow	init.vim	/^let s:yellow = "F09F17"$/;"	v
+setupWrapping	config/theme.vim	/^  function s:setupWrapping()$/;"	f
+vimrc	init.vim	/^augroup vimrc-javascript$/;"	a
+vimrc	init.vim	/^augroup vimrc-make-cmake$/;"	a
+vimrc	init.vim	/^augroup vimrc-python$/;"	a
+vimrc	init.vim	/^augroup vimrc-remember-cursor-position$/;"	a
+vimrc	init.vim	/^augroup vimrc-sync-fromstart$/;"	a
+vimrc	init.vim	/^augroup vimrc-wrapping$/;"	a
+wQ	init.vim	/^cnoreabbrev wQ wq$/;"	m
+{	config/autoclose.vim	/^inoremap { {}<left>$/;"	m
+{,	config/autoclose.vim	/^inoremap {, {},<left><left>$/;"	m
+{,<CR>	config/autoclose.vim	/^inoremap {,<CR> {<CR>},<ESC>O$/;"	m
+{,<tab>	config/autoclose.vim	/^inoremap {,<tab> {},$/;"	m
+{;	config/autoclose.vim	/^inoremap {; {};<left><left>$/;"	m
+{;<CR>	config/autoclose.vim	/^inoremap {;<CR> {<CR>};<ESC>O$/;"	m
+{;<tab>	config/autoclose.vim	/^inoremap {;<tab> {};$/;"	m
+{<CR>	config/autoclose.vim	/^inoremap {<CR> {<CR>}<ESC>O$/;"	m
+{<tab>	config/autoclose.vim	/^inoremap {<tab> {}$/;"	m

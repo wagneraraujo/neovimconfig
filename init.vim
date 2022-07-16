@@ -1415,9 +1415,9 @@ endfunction
 " 
 
 
-noremap <leader>z :bp<CR>
+noremap <leader>q :bp<CR>
 " noremap <leader>q :bp<CR>
-noremap <leader>x :bn<CR>
+noremap <leader>w :bn<CR>
 " noremap <leader>w :bn<CR>
 noremap <leader>c :bd<CR>
 
